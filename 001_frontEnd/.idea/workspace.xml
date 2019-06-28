@@ -5,11 +5,7 @@
     <bookmark url="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/README.md" line="27" mnemonic="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ce4fd3c-043c-4379-9e7b-02da700fbbe7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/01_JavaScript简介/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2ce4fd3c-043c-4379-9e7b-02da700fbbe7" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -67,15 +63,43 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-2085910776">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="md" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Markdown" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="md" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Markdown" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/01_JavaScript简介/README.md">
+        <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="116">
-                <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+              <first_editor relative-caret-position="87">
+                <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -94,7 +118,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -126,8 +150,8 @@
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/04_层叠性的三种意思/README.md" />
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/01_RGB表示法.html" />
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/02_16进制表示法.html" />
-        <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/README.md" />
         <option value="$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/01_JavaScript简介/README.md" />
+        <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/README.md" />
       </list>
     </option>
   </component>
@@ -138,8 +162,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-42" />
+    <option name="y" value="21" />
     <option name="width" value="1320" />
     <option name="height" value="784" />
   </component>
@@ -149,39 +173,42 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="001_frontEnd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="001_frontEnd" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="001_frontEnd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="001_frontEnd" type="462c0819:PsiDirectoryNode" />
               <item name="002_css简介" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="003_JavaScript初步" type="462c0819:PsiDirectoryNode" />
+              <item name="001_frontEnd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="001_frontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="002_css简介" type="462c0819:PsiDirectoryNode" />
+              <item name="02_层叠&amp;继承&amp;基本属性" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="frontEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="003_JavaScript初步" type="462c0819:PsiDirectoryNode" />
-              <item name="01_javascript_简介_规范_字面量_变量_数据类型" type="462c0819:PsiDirectoryNode" />
+              <item name="001_frontEnd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="001_frontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="002_css简介" type="462c0819:PsiDirectoryNode" />
+              <item name="02_层叠&amp;继承&amp;基本属性" type="462c0819:PsiDirectoryNode" />
+              <item name="05_CSS2.1中的颜色标识法" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -268,11 +295,12 @@
       <workItem from="1561339464598" duration="5743000" />
       <workItem from="1561345921430" duration="8657000" />
       <workItem from="1561592651185" duration="3116000" />
+      <workItem from="1561734124985" duration="97000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44841000" />
+    <option name="totallyTimeSpent" value="44938000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
@@ -526,18 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="203">
-            <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/02_16进制表示法.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
@@ -560,8 +576,20 @@
     <entry file="file://$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/01_JavaScript简介/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="116">
-            <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <first_editor relative-caret-position="203">
+            <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="87">
+            <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
