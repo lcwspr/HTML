@@ -72,21 +72,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="md" value="1" />
+          <entry key="html" value="4" />
+          <entry key="md" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Markdown" value="1" />
+          <entry key="HTML" value="4" />
+          <entry key="Markdown" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="html" value="59" />
           <entry key="md" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="HTML" value="59" />
           <entry key="Markdown" value="1" />
         </counts>
       </usages-collector>
@@ -94,12 +98,76 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="87">
+              <first_editor relative-caret-position="783">
                 <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/01_important提升权重.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习06_important无法提升层叠优先级.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习07_important影响就近原则.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习08_importan影响继承而来的一样近的元素的优先级.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/002_css简介/01_css简介/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SECOND">
+              <first_editor relative-caret-position="8265">
+                <caret line="285" selection-start-line="285" selection-end-line="285" />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/01_层叠性&amp;继承性/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="422">
+                <caret line="63" selection-start-line="63" selection-end-line="63" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -140,18 +208,19 @@
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/02_应用场景/01_层叠应用.html" />
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/02_应用场景/README.md" />
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/02_应用场景/02_特性层叠02.html" />
-        <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/01_层叠性&amp;继承性/README.md" />
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/02_应用场景/03_层叠应用03.html" />
-        <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/01_important提升权重.html" />
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习06_important无法提升继承.html" />
-        <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习07_important影响就近原则.html" />
-        <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习08_importan影响继承而来的一样近的元素的优先级.html" />
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/README.md" />
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/04_层叠性的三种意思/README.md" />
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/01_RGB表示法.html" />
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/02_16进制表示法.html" />
         <option value="$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/01_JavaScript简介/README.md" />
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/README.md" />
+        <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/01_important提升权重.html" />
+        <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习06_important无法提升层叠优先级.html" />
+        <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习07_important影响就近原则.html" />
+        <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习08_importan影响继承而来的一样近的元素的优先级.html" />
+        <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/01_层叠性&amp;继承性/README.md" />
       </list>
     </option>
   </component>
@@ -162,8 +231,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-42" />
-    <option name="y" value="21" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1320" />
     <option name="height" value="784" />
   </component>
@@ -190,6 +259,12 @@
               <item name="001_frontEnd" type="b2602c69:ProjectViewProjectNode" />
               <item name="001_frontEnd" type="462c0819:PsiDirectoryNode" />
               <item name="002_css简介" type="462c0819:PsiDirectoryNode" />
+              <item name="01_css简介" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="001_frontEnd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="001_frontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="002_css简介" type="462c0819:PsiDirectoryNode" />
               <item name="02_层叠&amp;继承&amp;基本属性" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -197,7 +272,7 @@
               <item name="001_frontEnd" type="462c0819:PsiDirectoryNode" />
               <item name="002_css简介" type="462c0819:PsiDirectoryNode" />
               <item name="02_层叠&amp;继承&amp;基本属性" type="462c0819:PsiDirectoryNode" />
-              <item name="05_CSS2.1中的颜色标识法" type="462c0819:PsiDirectoryNode" />
+              <item name="01_层叠性&amp;继承性" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -238,36 +313,36 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.02_16进制表示法.html">
+  <component name="RunManager" selected="JavaScript Debug.02_权重的练习08_importan影响继承而来的一样近的元素的优先级.html">
     <configuration name="01_RGB表示法.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/frontEnd/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/01_RGB表示法.html">
       <method v="2" />
     </configuration>
-    <configuration name="02_特性层叠02.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/frontEnd/002_css简介/02_层叠&amp;继承&amp;基本属性/02_应用场景/02_特性层叠02.html">
-      <method v="2" />
-    </configuration>
-    <configuration name="02_权重的练习06_important无法提升层叠优先级.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/frontEnd/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习06_important无法提升层叠优先级.html">
+    <configuration name="02_权重的练习06_important无法提升层叠优先级.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/001_frontEnd/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习06_important无法提升层叠优先级.html">
       <method v="2" />
     </configuration>
     <configuration name="02_权重的练习07_important影响就近原则.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/frontEnd/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习07_important影响就近原则.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="02_权重的练习08_importan影响继承而来的一样近的元素的优先级.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/001_frontEnd/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习08_importan影响继承而来的一样近的元素的优先级.html">
       <method v="2" />
     </configuration>
     <configuration name="02_16进制表示法.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/frontEnd/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/02_16进制表示法.html">
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.02_特性层叠02.html" />
-      <item itemvalue="JavaScript Debug.02_权重的练习06_important无法提升层叠优先级.html" />
       <item itemvalue="JavaScript Debug.02_权重的练习07_important影响就近原则.html" />
       <item itemvalue="JavaScript Debug.01_RGB表示法.html" />
       <item itemvalue="JavaScript Debug.02_16进制表示法.html" />
+      <item itemvalue="JavaScript Debug.02_权重的练习06_important无法提升层叠优先级.html (1)" />
+      <item itemvalue="JavaScript Debug.02_权重的练习08_importan影响继承而来的一样近的元素的优先级.html" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.02_权重的练习08_importan影响继承而来的一样近的元素的优先级.html" />
+        <item itemvalue="JavaScript Debug.02_权重的练习06_important无法提升层叠优先级.html (1)" />
         <item itemvalue="JavaScript Debug.02_16进制表示法.html" />
         <item itemvalue="JavaScript Debug.01_RGB表示法.html" />
         <item itemvalue="JavaScript Debug.02_权重的练习07_important影响就近原则.html" />
-        <item itemvalue="JavaScript Debug.02_权重的练习06_important无法提升层叠优先级.html" />
-        <item itemvalue="JavaScript Debug.02_特性层叠02.html" />
       </list>
     </recent_temporary>
   </component>
@@ -295,12 +370,12 @@
       <workItem from="1561339464598" duration="5743000" />
       <workItem from="1561345921430" duration="8657000" />
       <workItem from="1561592651185" duration="3116000" />
-      <workItem from="1561734124985" duration="97000" />
+      <workItem from="1561734124985" duration="1137000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44938000" />
+    <option name="totallyTimeSpent" value="45978000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
@@ -382,18 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/002_css简介/01_css简介/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SECOND">
-          <first_editor relative-caret-position="8265">
-            <caret line="285" selection-start-line="285" selection-end-line="285" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/01_层叠性&amp;继承性/02_继承性.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -464,29 +527,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/01_层叠性&amp;继承性/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-1462">
-            <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/02_应用场景/03_层叠应用03.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-215">
           <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习06_important无法提升层叠优先级.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -499,27 +543,6 @@
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习07_important影响就近原则.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习08_importan影响继承而来的一样近的元素的优先级.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/01_important提升权重.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -588,8 +611,60 @@
     <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="87">
+          <first_editor relative-caret-position="783">
             <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/01_important提升权重.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习06_important无法提升层叠优先级.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习07_important影响就近原则.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习08_importan影响继承而来的一样近的元素的优先级.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/002_css简介/01_css简介/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SECOND">
+          <first_editor relative-caret-position="8265">
+            <caret line="285" selection-start-line="285" selection-end-line="285" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/01_层叠性&amp;继承性/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="422">
+            <caret line="63" selection-start-line="63" selection-end-line="63" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
