@@ -37,7 +37,7 @@
 
 * 所有以https://开头的路径，或者以/开头的路径，我们都称他为绝对路径
 
-  `<img src="**http://i1.sinaimg.cn/dy/deco/2013/0329/logo/LOGO_1x.png" /> ` 绝对的网址  绝对路径
+  `<img src="http://i1.sinaimg.cn/dy/deco/2013/0329/logo/LOGO_1x.png" /> ` 绝对的网址  绝对路径
 
 * 以/开头的路径，表示当前服务器的根目录`<img src="/1.jpg">`  表示***当前服务器根目录*** 找到1.jpg
 
