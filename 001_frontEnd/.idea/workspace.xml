@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/README.md" line="39" mnemonic="9" />
-    <bookmark url="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/README.md" line="27" mnemonic="8" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="2ce4fd3c-043c-4379-9e7b-02da700fbbe7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/06_文字相关的属性-字体-行高-加粗-倾斜-下划线/05_精确还原新浪网页.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/07_盒模型/01_盒子模型.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/07_盒模型/READMD.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/img/03_盒子模型.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/img/04_width_padding.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/06_文字相关的属性/01_color属性.html" beforeDir="false" afterPath="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/06_文字相关的属性-字体-行高-加粗-倾斜-下划线/01_color属性.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/06_文字相关的属性/02_font-size属性.html" beforeDir="false" afterPath="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/06_文字相关的属性-字体-行高-加粗-倾斜-下划线/02_font-size属性.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/06_文字相关的属性/03_line-height行高属性.html" beforeDir="false" afterPath="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/06_文字相关的属性-字体-行高-加粗-倾斜-下划线/03_line-height行高属性.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/06_文字相关的属性/04_精确还原网易首页.html" beforeDir="false" afterPath="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/06_文字相关的属性-字体-行高-加粗-倾斜-下划线/04_精确还原网易首页.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/06_文字相关的属性/README.md" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,111 +17,26 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-776849526">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="13" />
-          <entry key="project.open.time.120" value="1" />
-          <entry key="project.open.time.18" value="1" />
-          <entry key="project.open.time.19" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.26" value="1" />
-          <entry key="project.open.time.28" value="1" />
-          <entry key="project.open.time.32" value="1" />
-          <entry key="project.open.time.39" value="1" />
-          <entry key="project.open.time.48" value="1" />
-          <entry key="project.open.time.57" value="1" />
-          <entry key="project.open.time.7" value="2" />
-          <entry key="project.open.time.78" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="14" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="html" value="23" />
-          <entry key="md" value="30" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="HTML" value="23" />
-          <entry key="Markdown" value="28" />
-          <entry key="PLAIN_TEXT" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="html" value="1519" />
-          <entry key="md" value="8892" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CSS" value="1" />
-          <entry key="HTML" value="1547" />
-          <entry key="Markdown" value="8863" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-2085910776">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.27" value="1" />
-          <entry key="project.open.time.30" value="1" />
-          <entry key="project.opened" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="html" value="12" />
-          <entry key="md" value="7" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="HTML" value="12" />
-          <entry key="Markdown" value="7" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="html" value="559" />
-          <entry key="md" value="2369" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="HTML" value="559" />
-          <entry key="Markdown" value="2369" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/06_文字相关的属性-字体-行高-加粗-倾斜-下划线/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/09_运算符初步/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="339">
-                <caret line="104" column="47" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
+              <first_editor relative-caret-position="986">
+                <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
               </first_editor>
-              <second_editor>
-                <markdownNavigatorState />
-              </second_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/06_文字相关的属性-字体-行高-加粗-倾斜-下划线/07_font-style属性.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/003_JavaScript初步/02_运算符详解_if语句初步/01_昨天内容回顾/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -169,8 +78,6 @@
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/README.md" />
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/04_层叠性的三种意思/README.md" />
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/01_RGB表示法.html" />
-        <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/02_16进制表示法.html" />
-        <option value="$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/01_JavaScript简介/README.md" />
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/README.md" />
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/01_important提升权重.html" />
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习06_important无法提升层叠优先级.html" />
@@ -185,20 +92,28 @@
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/06_文字相关的属性-字体-行高-加粗-倾斜-下划线/06_font-weight属性.html" />
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/06_文字相关的属性-字体-行高-加粗-倾斜-下划线/07_font-style属性.html" />
         <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/06_文字相关的属性-字体-行高-加粗-倾斜-下划线/README.md" />
+        <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/06_文字相关的属性-字体-行高-加粗-倾斜-下划线/test.html" />
+        <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/07_盒模型/READMD.md" />
+        <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/07_盒模型/01_盒子模型.html" />
+        <option value="$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/01_JavaScript简介/README.md" />
+        <option value="$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/02_16进制表示法.html" />
+        <option value="$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/01_JavaScript简介/01_JavaScript简介和HelloWorld/README.md" />
+        <option value="$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/01_JavaScript简介/02_JavaScript控制台_行文规范_注释/README.md" />
+        <option value="$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/01_JavaScript简介/03_字面量/README.md" />
+        <option value="$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/01_JavaScript简介/04_字符串的字面量/README.md" />
+        <option value="$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/01_JavaScript简介/05_变量的定义和赋值/README.md" />
+        <option value="$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/01_JavaScript简介/06_变量声明的提升/README.md" />
+        <option value="$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/01_JavaScript简介/07_变量的数据类型/README.md" />
+        <option value="$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/01_JavaScript简介/08_变量类型的转换/README.md" />
+        <option value="$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/01_JavaScript简介/09_运算符初步/README.md" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-45" />
-    <option name="y" value="-12" />
-    <option name="width" value="1320" />
-    <option name="height" value="788" />
+    <option name="x" value="280" />
+    <option name="y" value="-8" />
+    <option name="width" value="1325" />
+    <option name="height" value="895" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -216,27 +131,20 @@
             <path>
               <item name="001_frontEnd" type="b2602c69:ProjectViewProjectNode" />
               <item name="001_frontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="002_css简介" type="462c0819:PsiDirectoryNode" />
+              <item name="003_JavaScript初步" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="001_frontEnd" type="b2602c69:ProjectViewProjectNode" />
               <item name="001_frontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="002_css简介" type="462c0819:PsiDirectoryNode" />
-              <item name="02_层叠&amp;继承&amp;基本属性" type="462c0819:PsiDirectoryNode" />
+              <item name="003_JavaScript初步" type="462c0819:PsiDirectoryNode" />
+              <item name="02_运算符详解_if语句初步" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="001_frontEnd" type="b2602c69:ProjectViewProjectNode" />
               <item name="001_frontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="002_css简介" type="462c0819:PsiDirectoryNode" />
-              <item name="02_层叠&amp;继承&amp;基本属性" type="462c0819:PsiDirectoryNode" />
-              <item name="06_文字相关的属性-字体-行高-加粗-倾斜-下划线" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="001_frontEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="001_frontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="002_css简介" type="462c0819:PsiDirectoryNode" />
-              <item name="02_层叠&amp;继承&amp;基本属性" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="003_JavaScript初步" type="462c0819:PsiDirectoryNode" />
+              <item name="02_运算符详解_if语句初步" type="462c0819:PsiDirectoryNode" />
+              <item name="01_昨天内容回顾" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -247,23 +155,26 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/01_JavaScript简介/07_变量的数据类型" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Project\WebProject\frontEnd\002_css简介\02_层叠&amp;继承&amp;基本属性\00_review" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Project\WebProject\001_frontEnd\002_css简介\02_层叠&amp;继承&amp;基本属性\06_文字相关的属性" />
+      <recent name="D:\Program\Project\WebProject\001_frontEnd\003_JavaScript初步\01_javascript_简介_规范_字面量_变量_数据类型\01_JavaScript简介\07_变量的数据类型" />
+      <recent name="D:\Program\Project\WebProject\001_frontEnd\003_JavaScript初步\01_javascript_简介_规范_字面量_变量_数据类型\01_JavaScript简介\img" />
       <recent name="E:\Project\WebProject\001_frontEnd\002_css简介\02_层叠&amp;继承&amp;基本属性\img" />
+      <recent name="E:\Project\WebProject\001_frontEnd\002_css简介\02_层叠&amp;继承&amp;基本属性\06_文字相关的属性" />
       <recent name="E:\Project\WebProject\frontEnd\002_css简介\02_层叠&amp;继承&amp;基本属性\03_!important提升权重" />
-      <recent name="E:\Project\WebProject\frontEnd\002_css简介\02_层叠&amp;继承&amp;基本属性\01_层叠性&amp;继承性" />
-      <recent name="E:\Project\WebProject\frontEnd\002_css简介\02_层叠&amp;继承&amp;基本属性\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Program\Project\WebProject\001_frontEnd\003_JavaScript初步\01_javascript_简介_规范_字面量_变量_数据类型" />
+      <recent name="D:\Program\Project\WebProject\001_frontEnd\003_JavaScript初步\01_javascript_简介_规范_字面量_变量_数据类型\01_JavaScript简介\01_JavaScript简介和HelloWorld" />
+      <recent name="E:\Project\WebProject\frontEnd\002_css简介\02_层叠&amp;继承&amp;基本属性\00_review" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -279,19 +190,19 @@
     </option>
   </component>
   <component name="RunManager" selected="JavaScript Debug.02_权重的练习08_importan影响继承而来的一样近的元素的优先级.html">
-    <configuration name="01_RGB表示法.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/frontEnd/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/01_RGB表示法.html">
+    <configuration name="01_RGB表示法.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/frontEnd/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/01_RGB表示法.html">
       <method v="2" />
     </configuration>
-    <configuration name="02_权重的练习06_important无法提升层叠优先级.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/001_frontEnd/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习06_important无法提升层叠优先级.html">
+    <configuration name="02_权重的练习06_important无法提升层叠优先级.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/001_frontEnd/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习06_important无法提升层叠优先级.html">
       <method v="2" />
     </configuration>
-    <configuration name="02_权重的练习07_important影响就近原则.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/frontEnd/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习07_important影响就近原则.html">
+    <configuration name="02_权重的练习07_important影响就近原则.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/frontEnd/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习07_important影响就近原则.html">
       <method v="2" />
     </configuration>
-    <configuration name="02_权重的练习08_importan影响继承而来的一样近的元素的优先级.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/001_frontEnd/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习08_importan影响继承而来的一样近的元素的优先级.html">
+    <configuration name="02_权重的练习08_importan影响继承而来的一样近的元素的优先级.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/001_frontEnd/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/02_权重的练习08_importan影响继承而来的一样近的元素的优先级.html">
       <method v="2" />
     </configuration>
-    <configuration name="02_16进制表示法.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/frontEnd/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/02_16进制表示法.html">
+    <configuration name="02_16进制表示法.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/frontEnd/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/02_16进制表示法.html">
       <method v="2" />
     </configuration>
     <list>
@@ -338,17 +249,24 @@
       <workItem from="1561734124985" duration="5193000" />
       <workItem from="1561779495519" duration="1298000" />
       <workItem from="1562253208676" duration="4652000" />
+      <workItem from="1562336121483" duration="3472000" />
+      <workItem from="1562416829151" duration="5062000" />
+      <workItem from="1563113294549" duration="9419000" />
+      <workItem from="1563170982574" duration="8792000" />
+      <workItem from="1563270518946" duration="5024000" />
+      <workItem from="1563379802856" duration="3608000" />
+      <workItem from="1563411672437" duration="6691000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55984000" />
+    <option name="totallyTimeSpent" value="98052000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.18021472" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16469322" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -360,8 +278,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32988167" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32935917" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32859176" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32838982" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -370,57 +288,20 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/001_html简介/04_html.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SECOND">
-          <first_editor />
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/001_html简介/04_html.md" />
     <entry file="file://$PROJECT_DIR$/001_html简介/03_基本单词.md">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="348">
           <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SECOND">
-          <first_editor />
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/001_html简介/02_html.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SECOND">
-          <first_editor />
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/001_html简介/02_html.md" />
     <entry file="file://$PROJECT_DIR$/001_html简介/01_html.md">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="443">
           <caret line="144" column="14" lean-forward="true" selection-start-line="144" selection-start-column="14" selection-end-line="144" selection-end-column="14" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SECOND">
-          <first_editor />
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
         </state>
       </provider>
     </entry>
@@ -501,42 +382,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SECOND">
-          <first_editor relative-caret-position="1218">
-            <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/02_应用场景/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SECOND">
-          <first_editor relative-caret-position="580">
-            <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/04_层叠性的三种意思/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="232">
-            <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/README.md" />
+    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/02_应用场景/README.md" />
     <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/01_RGB表示法.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -544,37 +391,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/02_16进制表示法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/01_JavaScript简介/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="203">
-            <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="783">
-            <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/README.md" />
     <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/03_!important提升权重/01_important提升权重.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -603,42 +420,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/002_css简介/01_css简介/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SECOND">
-          <first_editor relative-caret-position="8265">
-            <caret line="285" selection-start-line="285" selection-end-line="285" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/00_review/00_review.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SECOND">
-          <first_editor relative-caret-position="3451">
-            <caret line="119" selection-start-line="119" selection-end-line="119" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/01_层叠性&amp;继承性/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="754">
-            <caret line="63" selection-start-line="63" selection-end-line="63" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/002_css简介/01_css简介/README.md" />
+    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/00_review/00_review.md" />
+    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/01_层叠性&amp;继承性/README.md" />
     <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/06_文字相关的属性-字体-行高-加粗-倾斜-下划线/04_精确还原网易首页.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -681,22 +465,141 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/06_文字相关的属性-字体-行高-加粗-倾斜-下划线/README.md" />
     <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/06_文字相关的属性-字体-行高-加粗-倾斜-下划线/07_font-style属性.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
+        <state relative-caret-position="319">
           <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/06_文字相关的属性-字体-行高-加粗-倾斜-下划线/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/06_文字相关的属性-字体-行高-加粗-倾斜-下划线/test.html" />
+    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/04_层叠性的三种意思/README.md" />
+    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/07_盒模型/READMD.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="339">
-            <caret line="104" column="47" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
+          <first_editor relative-caret-position="1027">
+            <caret line="42" column="20" lean-forward="true" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
           </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/07_盒模型/01_盒子模型.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/img/01_console面板.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/002_css简介/02_层叠&amp;继承&amp;基本属性/05_CSS2.1中的颜色标识法/02_16进制表示法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/02_JavaScript控制台_行文规范_注释/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="29">
+            <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/01_JavaScript简介和HelloWorld/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="846">
+            <caret line="87" selection-start-line="87" selection-end-line="87" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/03_字面量/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="1247">
+            <caret line="43" column="51" selection-start-line="41" selection-start-column="8" selection-end-line="46" selection-end-column="11" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/04_字符串的字面量/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="382">
+            <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/05_变量的定义和赋值/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="91">
+            <caret line="73" column="7" lean-forward="true" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/06_变量声明的提升/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="217">
+            <caret line="45" column="54" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/07_变量的数据类型/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="557">
+            <caret line="107" column="11" lean-forward="true" selection-start-line="107" selection-start-column="11" selection-end-line="107" selection-end-column="11" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/08_变量类型的转换/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="174">
+            <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/003_JavaScript初步/01_javascript_简介_规范_字面量_变量_数据类型/09_运算符初步/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="986">
+            <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/003_JavaScript初步/02_运算符详解_if语句初步/01_昨天内容回顾/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
