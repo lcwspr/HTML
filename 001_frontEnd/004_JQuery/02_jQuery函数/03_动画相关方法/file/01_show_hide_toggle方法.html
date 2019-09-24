@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="button" value="show">
+    <input type="button" value="hide">
+    <input type="button" value="toggle">
+    <input type="button" value="show(1000)"/>
+    <input type="button" value="hide(1000)"/>
+    <input type="button" value="toggle(1000)"/>
+
+    <div></div>
+
+    <script type="text/javascript" src="../../../../999_js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript">
+        $("input:eq(0)").click(function () {
+            $("div").show();
+        });
+        $("input:eq(1)").click(function () {
+            $("div").hide();
+        });
+        $("input:eq(2)").click(function () {
+            $("div").toggle();
+        });
+        $("input:eq(3)").click(function(){
+            $("div").show(1000);		//让一个本身是display:none;元素显示
+        });
+
+        $("input:eq(4)").click(function(){
+            $("div").hide(1000); 		//隐藏元素display:none;
+        });
+
+        $("input:eq(5)").click(function(){
+            $("div").toggle(1000,function(){
+                alert("土狗完毕！");
+            });		//切换显示状态。
+            //自行带有判断，如果可见，就隐藏；否则显示。
+        });
+        
+    </script>
+</body>
+</html>

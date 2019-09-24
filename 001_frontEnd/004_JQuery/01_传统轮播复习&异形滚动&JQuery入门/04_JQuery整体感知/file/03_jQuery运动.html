@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .animate{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="animate"></div>
+
+
+    <script type="text/javascript" src="../../../../999_js/jquery-1.12.3.min.js"></script>
+
+    <script type="text/javascript">
+        $(".animate").animate({"left":900, "width":100,"opacity": 0.4},4000, function () {
+           alert('运动完成');
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p{
+            width: 60px;
+            height: 60px;
+            background-color: #ccc;
+        }
+        
+    </style>
+</head>
+<body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <script type="text/javascript" src="../../../../999_js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript">
+
+        // 所有的p变红
+        $('p').css("background-color", "red");
+
+        // 第一个p变红
+        $('p:first').css("background-color","green");
+        // 最后一个p
+        $('p:last').css("background-color","pink");
+        // 任意位置一个
+        $('p:eq(3)').css("background-color","black");
+        // 小于3的p
+        $('p:lt(3)').animate({'width':500},400);
+        // 大于3的p
+        $('p:gt(3)').animate({'width':10},400);
+        // 下标为奇数的
+        $('p:odd').animate({'height':10},1000);
+        // 偶数
+        $('p:even').animate({'height':200},2000);
+
+    </script>
+</body>
+</html>

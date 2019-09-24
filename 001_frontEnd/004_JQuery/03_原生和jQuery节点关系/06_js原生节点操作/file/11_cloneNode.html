@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>哈哈</li>
+    <li>嘻嘻</li>
+    <li>么么哒</li>
+</ul>
+
+    <script>
+
+        var oUl = document.getElementsByTagName('ul');
+        var li = document.getElementsByTagName('li');
+
+        oUl.appendChild(li[0].cloneNode(true));
+
+    </script>
+</body>
+</html>

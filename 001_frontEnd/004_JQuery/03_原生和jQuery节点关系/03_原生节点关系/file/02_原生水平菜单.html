@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            width: 960px;
+            height: 40px;
+            border: 1px solid #000;
+            margin: 50px auto;
+        }
+
+        .nav ul{
+            list-style: none;
+        }
+
+        .nav ul li{
+            position: relative;
+            float: left;
+            width: 120px;
+            height: 40px;
+        }
+        .nav ul li a{
+            display: block;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: pink;
+            text-decoration: none;
+            color: blue;
+        }
+        .nav ul li a:hover{
+            background-color: yellow;
+        }
+        .nav ul li .dropbox{
+            position: absolute;
+            top: 40px;
+            width: 120px;
+            /*display: none;*/
+            overflow: hidden;
+        }
+        .nav ul li .dropbox a{
+            background-color: blue;
+            line-height: 40px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav" id="nav">
+        <ul>
+            <li>
+                <a href="">网站栏目</a>
+                <div class="dropbox">
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                </div>
+            </li>
+            <li>
+                <a href="">网站栏目</a>
+                <div class="dropbox">
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                </div>
+            </li>
+            <li>
+                <a href="">网站栏目</a>
+                <div class="dropbox">
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                </div>
+            </li>
+            <li>
+                <a href="">网站栏目</a>
+                <div class="dropbox">
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                </div>
+            </li>
+            <li>
+                <a href="">网站栏目</a>
+                <div class="dropbox">
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                </div>
+            </li>
+            <li>
+                <a href="">网站栏目</a>
+                <div class="dropbox">
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                </div>
+            </li>
+            <li>
+                <a href="">网站栏目</a>
+                <div class="dropbox">
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                </div>
+            </li>
+            <li>
+                <a href="">网站栏目</a>
+                <div class="dropbox">
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                    <p><a href="">啊哈哈哈</a></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script src="../../../../999_js/animate-2.0.1.js"></script>
+    <script src="../../../../999_js/fetchComputedStyle.js"></script>
+
+    <script>
+        // 得到所有的li
+        var lis = document.getElementById('nav').getElementsByTagName('li');
+
+        // li的监听
+        for(var i = 0; i < lis.length; i++){
+            // 鼠标进入，让自己的儿子dropbox显示
+            lis[i].onmouseenter = function () {
+                // 备份一下自己的this
+                var self = this;
+                // 得到自己儿子的dropbox
+                var mydropbox = (function () {
+                    var childNodes = self.childNodes;
+                    for(var i = 0 ; i < childNodes.length; i++){
+                        if(childNodes[i].className === "dropbox"){
+                            return childNodes[i];
+                        }
+                    }
+                })();
+                // mydropbox.style.display  = "block";
+
+                // 得到菜单项目的数量
+                var ps  = mydropbox.getElementsByTagName("p");
+                console.log(ps.length);
+                // 动画进场
+                if(mydropbox){
+                    mydropbox.style.display = "block";
+                    mydropbox.style.height = "0px";
+                    animate(mydropbox,{'height': ps.length * 40},1000);
+                }
+
+            }
+
+            // 每一个函数都会有this,
+            // 当一个函数是由事件触发的时候，那么this指向触发事件的对象
+            // 一个普通的函数的this执行window
+        }
+
+        for(var i = 0; i < lis.length; i++){
+            // 鼠标进入，让自己的儿子dropbox显示
+            lis[i].onmouseleave = function () {
+                // 备份一下自己的this
+                var self = this;
+                // 得到自己儿子的dropbox
+                var mydropbox = (function () {
+                    var childNodes = self.childNodes;
+                    for(var i = 0 ; i < childNodes.length; i++){
+                        if(childNodes[i].className === "dropbox"){
+                            return childNodes[i];
+                        }
+                    }
+                })();
+                // mydropbox.style.display  = "none";
+                var ps  = mydropbox.getElementsByTagName("p");
+
+                animate(mydropbox,{'height':0},1000,function () {
+                    mydropbox.style.height = ps.length * 40 +"px";
+                    mydropbox.style.display = "none";
+                });
+
+
+            }
+
+        }
+    </script>
+</body>
+</html>

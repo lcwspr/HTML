@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" name="" id="txt">
+    <input type="button" id="btn" value="xxx">
+
+    <ul>
+    </ul>
+
+
+    <script>
+        var ul = document.getElementsByTagName('ul')[0];
+        var lis = document.getElementsByTagName('li');
+        var txt = document.getElementById('txt');
+        var btn = document.getElementById('btn');
+
+        btn.onclick = function () {
+            var oLi = document.createElement('li');
+            oLi.innerHTML = txt.value;
+            ul.insertBefore(oLi, lis[0]);
+
+        }
+
+    </script>
+</body>
+</html>

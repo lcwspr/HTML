@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>0000</p>
+    <p>1111</p>
+    <p>2222</p>
+
+    <script type="text/javascript" src="../../../../999_js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript">
+        // 表示修改里面的问题，相当于innerHTML
+        $("p").eq(2).html("hhhhhaaaaa");
+
+        $("p").get(0).innerHTML = "hello world";
+        $("p")[0].innerHTML = "hello world";
+
+    </script>
+</body>
+</html>

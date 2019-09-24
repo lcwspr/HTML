@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>吃饭 <a href="javascript:void(0);">删除</a></li>
+    <li>睡觉 <a href="javascript:void(0);">删除</a></li>
+    <li>打豆豆 <a href="javascript:void(0);">删除</a></li>
+</ul>
+
+<script>
+
+    var ul = document.getElementsByTagName('ul')[0];
+    var lis = ul.getElementsByTagName('li');
+    var as = ul.getElementsByTagName('a');
+
+    for(var i = 0; i < as.length; i++){
+        as[i].onclick = function () {
+            ul.removeChild(this.parentNode);
+        }
+    }
+</script>
+</body>
+</html>

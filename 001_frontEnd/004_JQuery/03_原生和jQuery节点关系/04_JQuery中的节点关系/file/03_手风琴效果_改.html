@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>accordion [e ke rou din]</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .accordion{
+            width: 500px;
+            margin: 100px auto;
+            border: 1px solid #000;
+        }
+        .accordion ul{
+            list-style: none;
+        }
+        .accordion ul li.cur h3{
+            background-color: yellow;
+
+        }
+        .accordion ul li h3{
+            line-height: 40px;
+            background-color: skyblue;
+            padding:0 10px;
+            border-bottom: 1px solid black;
+            color: white;
+            position: relative;
+        }
+        .accordion ul li .content{
+            padding: 10px;
+            line-height: 150%;
+            font-size: 16px;
+            display: none;
+        }
+
+        .accordion ul li i{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: yellow;
+            background: url(../img/show.png);
+        }
+        .accordion ul li.cur i{
+            background-position: 0 -20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="accordion">
+        <ul>
+            <li>
+                <h3>贾宝玉 <i></i></h3>
+                <div class="content">
+                    <p>主人公贾宝玉是一个又奇又俗的人物。构成他性格的主要特征是叛逆。他行为“偏僻而乖张”，是封建社会的叛逆者。他鄙视功名利禄，不愿走“学而优则仕”的仕途。他痛恨“八股”，辱骂读书做官的人是“国贼禄蠹”，懒于与他们接触拜会</p>
+                </div>
+            </li>
+            <li>
+                <h3>林黛玉 <i></i></h3>
+                <div class="content">
+                    <p>林黛玉是一个才华横溢而性格孤傲的女子，“可叹停机德，堪怜咏絮才。玉带林中挂，金簪雪里埋”，则是她的写照。她从小失去双亲，寄居在荣国府，虽然贾母对她疼爱有加，但由于清高自尊的个性，她常生“寄人篱下”的伤感。</p>
+                </div>
+            </li>
+            <li>
+                <h3>王熙凤 <i></i></h3>
+                <div class="content">
+                    <p>荣府内，还有一个与众不同的人物，她便是王熙凤。王熙凤的阴毒可谓人人皆知，作为荣府“总管”，她弄权作势，两面三刀。她用毒计害死贾瑞，又阴谋逼死尤三姐。她生性尖酸刻薄，到最后害了全家。</p>
+                </div>
+            </li>
+            <li>
+                <h3>探春 <i></i></h3>
+                <div class="content">
+                    <p>贾探春，贾政之女——她没有黛玉的纤细怜人，没有宝钗的乖巧伶俐，没有香云的活泼开朗，却有卓超的才干，过人的智慧，深僻的见解，远大的眼光，这些在第五、六回“敏探春兴利除宿弊，贤宝钗小惠全大体”中精彩地表现出来了。</p>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+    <script src="../../../../999_js/jquery-1.12.3.min.js"></script>
+    <script>
+        // 监听h3
+        $(".accordion ul li h3").click(function () {
+
+            // 所有的合上
+            $(".accordion .content").slideUp();
+
+            // 自己展开
+            if($(this).siblings('.content').is(":visible")){
+                $(this).siblings('.content').slideUp(400);
+                $(this).parent('li').removeClass('cur');
+            }else{
+                $(this).siblings('.content').slideDown(400);
+                $(".accordion li").removeClass('cur');
+                $(this).parent('li').addClass('cur');
+            }
+
+
+        })
+    </script>
+</body>
+</html>

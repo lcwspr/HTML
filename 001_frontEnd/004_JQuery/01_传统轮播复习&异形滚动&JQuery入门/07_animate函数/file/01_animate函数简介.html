@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        p{
+            width: 60px;
+            height: 60px;
+            background-color: red;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <p></p>
+
+    <script type="text/javascript" src="../../../../999_js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript">
+
+        $('p').animate({"width": 1000}, 1000, function () {
+            $(this).css('background-color','yellow');
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <select name="" id="year">
+    </select>
+
+    <script>
+        var year = document.getElementById('year');
+
+        for(var i = 1970; i < 2019; i++){
+            var oOption = document.createElement('option');
+            oOption.value = i;
+            oOption.innerHTML = i;
+            year.appendChild(oOption);
+        }
+    </script>
+</body>
+</html>

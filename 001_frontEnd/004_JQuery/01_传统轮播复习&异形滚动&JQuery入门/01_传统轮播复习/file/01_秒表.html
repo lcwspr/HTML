@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <script type="text/javascript">
+        var s = 0;
+        var h1 = document.getElementsByTagName("h1")[0];
+        setInterval(function(){
+            s++;
+            h1.innerHTML = (parseInt(s / 60))+'分'+parseInt(s % 60) + "秒";
+        },1000)
+    </script>
+</body>
+</html>

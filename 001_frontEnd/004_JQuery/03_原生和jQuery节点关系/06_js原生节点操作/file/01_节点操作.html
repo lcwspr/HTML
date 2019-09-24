@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li id="first">AAAA</li>
+    <li>BBBB</li>
+    <li>CCCC</li>
+</ul>
+
+    <script>
+
+        var oUl = document.getElementsByTagName('ul')[0];
+        // 创建一个li标签，用变量oLi表示。创建出来的节点不是任何节点的儿子
+        // 也就是说没有在dom树上
+        var oLi = document.createElement('li');
+        oLi.innerHTML = "DDDD";
+
+        oUl.appendChild(oLi);
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box ul{
+            list-style: none;
+            margin: 100px;
+        }
+        .choose{
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box" id="box">
+        <ul>
+            <li><input type="checkbox" name="">吃饭</li>
+            <li><input type="checkbox" name="">睡觉</li>
+            <li><input type="checkbox" name="">打豆豆</li>
+            <li><input type="checkbox" name="">哈哈哈哈</li>
+        </ul>
+        <input type="text" name="" id="haha">
+    </div>
+
+    <script>
+        // 得到所有的li
+        var inputs = document.getElementById("box").getElementsByTagName("input");
+
+        // li的事件监听
+        for(var i = 0; i < inputs.length; i++){
+            // 当勾选情况改变的时候触发事件
+            // 如果用键盘来改变勾选状态，onclick可能不会触发
+            inputs[i].onchange = function () {
+                this.parentNode.className = this.checked ?"choose" :"";
+            }
+        }
+
+        var input = document.getElementById('haha');
+        input.onchange = function () {
+            alert('hehehehe.')
+        }
+
+    </script>
+</body>
+</html>

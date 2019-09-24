@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <p>杨幂</p>
+        <p id="ab">Angelababy</p>
+        <p>刘诗诗</p>
+    </div>
+
+    <script>
+
+        var oDiv = document.getElementsByTagName('div')[0];
+        var oAB = document.getElementById('ab');
+
+        var oP = document.createElement('p');
+        oP.innerHTML = "lcwspr";
+        oDiv.replaceChild(oP,oAB);
+    </script>
+</body>
+</html>

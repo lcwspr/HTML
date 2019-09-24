@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="点我" id="btn">
+
+    <div id="box">
+        
+    </div>
+    <script>
+        var box = document.getElementById('box');
+        var btn = document.getElementById('btn');
+
+        btn.onclick = function () {
+            box.innerHTML += "<ul><li>做一顿饭</li><li>做两顿饭</li></ul>"
+        }
+    </script>
+</body>
+</html>

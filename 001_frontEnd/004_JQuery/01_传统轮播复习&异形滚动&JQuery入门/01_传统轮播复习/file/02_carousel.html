@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .carousel{
+            width: 560px;
+            height: 300px;
+            margin: 100px auto;
+            border: 1px solid #000;
+            position: relative;
+        }
+        .carousel .m_unit{
+            width: 9000px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .carousel .m_unit ul{
+            list-style: none;
+        }
+        .carousel .m_unit ul li{
+            float: left;
+            width: 560px;
+            height: 300px;
+            overflow: hidden;
+        }
+        .carousel .btns a{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            top: 50%;
+            margin-top: -20px;
+            background-color: red;
+            z-index: 999;
+        }
+        .carousel .btns a.leftBtn{
+            left: 10px;
+        }
+
+        .carousel .btns a.rightBtn{
+            right: 10px;
+        }
+
+        .carousel .circles{
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            width: 150px;
+            height: 20px;
+            z-index: 999;
+        }
+
+        .carousel .circles ol{
+            list-style: none;
+        }
+        .carousel .circles ol li{
+            float: left;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background-color: pink;
+            cursor:pointer;
+        }
+        .circles ol li.current{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel" id="carousel">
+        <div class="btns">
+            <a href="javascript:void(0);" class="leftBtn" id="leftBtn"></a>
+            <a href="javascript:void(0);" class="rightBtn" id="rightBtn"></a>
+        </div>
+        <div class="m_unit" id="m_unit">
+            <ul>
+                <li><a href="#"><img src="dog/0.jpg" alt=""></a></li>
+                <li><a href="#"><img src="dog/1.jpg" alt=""></a></li>
+                <li><a href="#"><img src="dog/2.jpg" alt=""></a></li>
+                <li><a href="#"><img src="dog/3.jpg" alt=""></a></li>
+                <li><a href="#"><img src="dog/4.jpg" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="circles" id="circles">
+            <ol>
+                <li class="current"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+    </div>
+    <script src="js/animate-2.0.1.js"></script>
+    <script type="text/javascript">
+
+
+      // 配置
+      var option = {
+          "interval" : 2000,  // 间隔时间
+          "animatetime": 500,
+          "tween": "Linear",
+          "width": 560
+      };
+
+      var oCarousel = document.getElementById("carousel");
+      var oLeftBtn = document.getElementById("leftBtn");
+      var oRightBtn = document.getElementById("rightBtn");
+      var oMoveUnit = document.getElementById("m_unit");
+      var oCircles = document.getElementById("circles");
+      var oImageUl = oMoveUnit.getElementsByTagName("ul")[0];
+      var imgListArr = oMoveUnit.getElementsByTagName("li");
+      var circlesListArr = oCircles.getElementsByTagName("li");
+
+      // 克隆前面得到个数
+      var imgLength = imgListArr.length;
+
+      // 魔术的准备就是克隆第一张图片
+      oImageUl.append(oImageUl.appendChild(imgListArr[0].cloneNode(true)));
+
+      // 信号量
+      var idx = 0;
+
+      // 右按钮监听
+      oRightBtn.onclick = rightBtnHander;
+      // 自动轮播
+      var timer = setInterval(rightBtnHander, option.interval);
+      // 鼠标进入停止，离开继续
+      oCarousel.onmouseover = function () {
+          clearInterval(timer);
+          timer = 0;
+      };
+      oCarousel.onmouseout = function () {
+          if(timer!==0){
+              clearInterval(timer);
+          }
+          timer = setInterval(rightBtnHander, option.interval);
+      };
+
+      // 右边按钮的事件处理函数
+      function rightBtnHander(){
+          // 函数截流
+          if(oMoveUnit.isanimated) return ;
+
+          // 信号量的变化
+          idx++;
+          animate(oMoveUnit,{"left":-option.width * idx}, option.animatetime,option.tween,function () {
+              if(idx > imgLength -1){
+                  idx = 0;
+                  oMoveUnit.style.left = "0px";
+              }
+          });
+
+          // 改变小圆点，注意这个语句会在animate回掉函数前触发
+          changeCircles();
+      }
+
+
+      oLeftBtn.onclick = function(){
+          // 函数截流
+          if(oMoveUnit.isanimated) return ;
+
+          // 信号量的变化
+          idx--;
+          if(idx < 0){
+              idx = imgLength - 1;
+              oMoveUnit.style.left = imgLength * -option.width + "px";
+          }
+
+          animate(oMoveUnit,{"left":-option.width * idx}, option.animatetime, option.tween);
+
+          // 改变小圆点，注意这个语句会在animate回掉函数前触发
+          changeCircles();
+      }
+
+      // 小圆点的事件监听
+      for(var i = 0; i < circlesListArr.length; i++){
+          circlesListArr[i].index = i;
+          circlesListArr[i].onclick = function () {
+              // 信号量就是自己的序号
+              idx = this.index;
+              // 拉动
+              animate(oMoveUnit,{"left": -option.width * idx}, option.animatetime, option.tween);
+              // 改变小圆点
+              changeCircles()
+          }
+      }
+
+
+      // 根据信号量设置小圆点
+      function changeCircles() {
+          // 注意，小圆点下标最大到4，而信号量可能到5
+          var n = idx > 4 ? 0 : idx;
+
+          for(var i = 0; i < circlesListArr.length ; i++){
+              circlesListArr[i].className = "";
+          }
+          circlesListArr[n].className = "current";
+      }
+
+    </script>
+</body>
+</html>

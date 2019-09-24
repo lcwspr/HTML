@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">我是box盒子</div>
+    <script type="text/javascript" src="../../../../999_js/jquery-1.12.3.min.js"></script>
+
+    <script type="text/javascript">
+        var x = $("#box");
+        console.log(x);
+
+        // 转换为原生的对象
+        console.log(x[0]);
+    </script>
+
+</body>
+</html>

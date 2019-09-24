@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .circles ol{
+            width: 360px;
+            height: 40px;
+            list-style: none;
+            margin: 100px auto;
+        }
+        .circles ol li{
+            float: left;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            background-color: pink;
+            margin-right: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="circles">
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+
+    <script type="text/javascript" src="../../../../999_js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript">
+
+        // 批量添加监听   节点关系
+        $(".circles ol li").mouseenter(function () {
+            console.log(this);
+            $(this).css("background-color", "red")
+                .siblings().css("background-color","pink");
+        })
+    </script>
+
+</body>
+</html>

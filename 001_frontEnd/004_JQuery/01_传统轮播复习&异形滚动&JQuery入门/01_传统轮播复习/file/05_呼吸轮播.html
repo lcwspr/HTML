@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .carousel{
+            width: 560px;
+            height: 300px;
+            margin: 100px auto;
+            border: 1px solid #000;
+            position: relative;
+        }
+        .carousel .imageList ul{
+            list-style: none;
+        }
+        .carousel .imageList ul li{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 560px;
+            height: 300px;
+            opacity: 0;
+            filter:alpha(opacity=0);
+        }
+        .carousel .imageList ul li.first {
+            opacity: 1;
+            filter:alpha(opacity=100);
+        }
+        .carousel .btns a{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            top: 50%;
+            margin-top: -20px;
+            background-color: skyblue;
+            z-index: 999;
+        }
+        .carousel .btns a.leftBtn{
+            left: 10px;
+        }
+
+        .carousel .btns a.rightBtn{
+            right: 10px;
+        }
+
+        .carousel .circles{
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            width: 150px;
+            height: 20px;
+            z-index: 999;
+        }
+
+        .carousel .circles ol{
+            list-style: none;
+        }
+        .carousel .circles ol li{
+            float: left;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background-color: pink;
+            cursor:pointer;
+        }
+        .circles ol li.current{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="carousel" id="carousel">
+    <div class="btns">
+        <a href="javascript:void(0);" class="leftBtn" id="leftBtn"></a>
+        <a href="javascript:void(0);" class="rightBtn" id="rightBtn"></a>
+    </div>
+    <div class="imageList" id="imageList">
+        <ul>
+            <li class="first"><a href="111"><img src="dog/0.jpg" alt=""></a></li>
+            <li><a href="222"><img src="dog/1.jpg" alt=""></a></li>
+            <li><a href="333"><img src="dog/2.jpg" alt=""></a></li>
+            <li><a href="444"><img src="dog/3.jpg" alt=""></a></li>
+            <li><a href="555"><img src="dog/4.jpg" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="circles" id="circles">
+        <ol>
+            <li class="current"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+</div>
+<script src="js/animate-2.0.1.js"></script>
+<script type="text/javascript">
+
+
+    var oCarousel = document.getElementById("carousel");
+    var oLeftBtn = document.getElementById("leftBtn");
+    var oRightBtn = document.getElementById("rightBtn");
+    var oImageList = document.getElementById("imageList");
+    var oCircles = document.getElementById("circles");
+    var oImageUl = oImageList.getElementsByTagName("ul")[0];
+    var imgListArr = oImageList.getElementsByTagName("li");
+    var circlesListArr = oCircles.getElementsByTagName("li");
+
+    // 图片的个数
+    var imagLength = imgListArr.length;
+
+    // 信号量
+    var idx = 0;
+
+
+    // 右按钮监听
+    oRightBtn.onclick = rightBtnHander;
+    // 自动轮播
+    var timer = setInterval(rightBtnHander, 2000);
+    // 鼠标进入停止，离开继续
+    oCarousel.onmouseover = function () {
+        clearInterval(timer)
+        timer = 0;
+    }
+    oCarousel.onmouseout = function () {
+        if(timer !== 0){
+            clearInterval(timer);
+        }
+        timer = setInterval(rightBtnHander, 2000);
+    }
+
+    // 右按钮监听
+    function rightBtnHander() {
+        // 函数截流
+        if(imgListArr[idx].isanimated) return ;
+
+        // 老图淡出
+        animate(imgListArr[idx], {"opacity":0}, 600);
+        // 信号量的变化
+        idx ++;
+        if(idx > imagLength -1){
+            idx = 0;
+        }
+        // 新图淡入
+        animate(imgListArr[idx], {"opacity": 1}, 600);
+        changeCircles();
+    }
+
+    // 左按钮的事件监听
+    oLeftBtn.onclick = function () {
+        // 函数截流
+        if(imgListArr[idx].isanimated) return ;
+        // 老图淡出
+        animate(imgListArr[idx],{"opacity":0},600);
+        idx --;
+        if(idx < 0){
+            idx = imagLength - 1;
+        }
+        // 新图淡入
+        animate(imgListArr[idx],{"opacity":1}, 600);
+        changeCircles();
+    }
+
+
+    // 小圆点的监听
+    for(var i = 0; i < circlesListArr.length; i++){
+        circlesListArr[i].index = i;
+        circlesListArr[i].onclick = function () {
+            // 函数截流
+            if(imgListArr[idx].isanimated) return ;
+
+            // 老图淡出
+            animate(imgListArr[idx], {"opacity":0}, 600);
+            // 信号量的变化
+            idx = this.index;
+            // 新图淡入
+            animate(imgListArr[idx], {"opacity": 1}, 600);
+            changeCircles();
+        }
+    }
+
+
+    // 根据信号量设置小圆点
+    function changeCircles() {
+        // 注意，小圆点下标最大到4，而信号量可能到5
+        var n = idx > 4 ? 0 : idx;
+
+        for(var i = 0; i < circlesListArr.length ; i++){
+            circlesListArr[i].className = "";
+        }
+        circlesListArr[n].className = "current";
+    }
+
+
+</script>
+</body>
+</html>

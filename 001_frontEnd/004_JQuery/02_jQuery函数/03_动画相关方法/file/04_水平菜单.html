@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav{
+            width: 960px;
+            height: 40px;
+            margin: 50px auto;
+            border: 1px solid #000;
+        }
+
+        .nav ul{
+            list-style: none;
+        }
+
+        .nav ul li{
+            float: left;
+            width: 120px;
+            height: 40px;
+            background-color: greenyellow;
+            text-align: center;
+            line-height: 40px;
+            position: relative;
+        }
+        .nav ul li a{
+            text-decoration: none;
+            color: deepskyblue;
+        }
+
+        .nav ul li .dropbox{
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 120px;
+            display: none;
+            padding-top: 20px;
+        }
+        .nav ul li .dropbox .inner{
+            background-color: skyblue;
+        }
+
+        .nav ul li .dropbox a{
+            display: block;
+            line-height: 40px;
+        }
+
+        .nav ul li .dropbox a:hover{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav">
+    <ul>
+        <li>
+            <a href="#">栏目名称</a>
+            <div class="dropbox">
+                <div class="inner">
+                    <p><a href="">星光闪耀</a></p>
+                    <p><a href="">那就这样吧</a></p>
+                    <p><a href="">其实还好</a></p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="#">公司新闻</a>
+            <div class="dropbox">
+                <div class="inner">
+                    <p><a href="">天津公司新闻</a></p>
+                    <p><a href="">日本公司新闻和</a></p>
+                    <p><a href="">北京公司新闻</a></p>
+                    <p><a href="">上海公司新闻还好</a></p>
+                </div>
+            </div>
+        </li>
+        <li><a href="#">栏目名称</a></li>
+        <li><a href="#">栏目名称</a></li>
+        <li><a href="#">栏目名称</a></li>
+        <li><a href="#">栏目名称</a></li>
+        <li><a href="#">栏目名称</a></li>
+        <li><a href="#">栏目名称</a></li>
+    </ul>
+</div>
+
+
+    <script type="text/javascript" src="../../../../999_js/jquery-1.12.3.min.js"></script>
+    <script>
+
+        // 问题1 监听能不能给a那?
+            // 不能，如果给a那么才能能够展开，但是用户永远选择不到里面
+        // $(".nav ul li").eq(0).mouseenter(function () {
+        //     $(".dropbox").slideDown(400);
+        // })
+        // $(".nav ul li").eq(0).mouseleave(function () {
+        //     $(".dropbox").slideUp(300);
+        // })
+
+        // 问题2 想要让菜单不要与显示条贴合的过于紧密，能不能直接设置top定位来空出距离
+            // 不能，用户永远选不到，因为dropbox与li的缝隙不是li的范围
+            // 内部嵌套一个盒子inner
+
+
+        // 问题3 如果inner里面再次使用ul和li,那么会造成样式选择的冲突
+            // 使用后代选择器 >
+            // 不要使用在inner里面再次使用ul li
+
+        // 问题4 如果多个的话那么就会出现移入一个li,所有的dropbox都会出来，jQuery可以判断自己的儿子弹出
+
+        $(".nav ul li").mouseenter(function () {
+            $(this).children(".dropbox").slideDown(400);
+        })
+        $(".nav ul li").mouseleave(function () {
+            $(this).children(".dropbox").slideUp(300);
+        })
+    </script>
+</body>
+</html>

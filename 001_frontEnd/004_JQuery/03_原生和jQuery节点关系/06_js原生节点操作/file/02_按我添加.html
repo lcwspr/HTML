@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" name="" placeholder="你想要啥">
+<input type="button" value="按我呀">
+<ul>
+    <li>AAAA</li>
+    <li>BBBB</li>
+    <li>CCCC</li>
+</ul>
+<script>
+    var oUl = document.getElementsByTagName('ul')[0];
+    var oTxt = document.getElementsByTagName('input')[0];
+    var oButton = document.getElementsByTagName('input')[1];
+
+    oButton.onclick = function () {
+        var txt = oTxt.value;
+        var oNewLi = document.createElement('li');
+        oNewLi.innerHTML = txt;
+        oUl.appendChild(oNewLi);
+    };
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .choose{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li><input type="checkbox">哈哈哈</li>
+            <li><input type="checkbox">i love you</li>
+            <li><input type="checkbox">no way </li>
+            <li><input type="checkbox">this is all</li>
+            <li><input type="checkbox">i can do that</li>
+        </ul>
+    </div>
+    <script src="../../../../999_js/jquery-1.12.3.min.js"></script>
+    <script>
+        $('input').change(function () {
+            if($(this).get(0).checked){
+                $(this).parent().addClass("choose");
+            }else{
+                $(this).parent().removeClass("choose");
+            }
+        })
+
+    </script>
+
+</body>
+</html>
