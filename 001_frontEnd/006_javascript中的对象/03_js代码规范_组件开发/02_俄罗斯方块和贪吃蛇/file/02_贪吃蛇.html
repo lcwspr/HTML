@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        table,tr,td{
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+        td{
+            width: 18px;
+            height: 18px;
+        }
+        .red{
+            background-color: red;
+        }
+        .blue{
+            background-color: blue;
+        }
+        #map{
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+<table id="map">
+
+</table>
+
+    <script>
+
+        var oMap = document.getElementById('map');
+        var tds = [];   // 二维数组
+
+        // 两层for循环做了两件事情
+        // 1 创建dom对象，创建了400个tr,20个td,追加到了table里面。
+        // 2 将400个td放到tds数组里面，tds是一个二维数组，存放着td的dmo元素
+        
+
+        for(var i = 0; i < 20; i++){
+            var tr = document.createElement("tr");
+            var thisrowtd = [];    // 存放当前行td的数组，存放的是Dom对象
+            tds[i] = thisrowtd;
+
+            for(var j = 0; j < 20; j++){
+                var td = document.createElement("td");
+                tr.appendChild(td);
+                thisrowtd.push(td);
+            }
+            oMap.appendChild(tr);
+        }
+
+
+
+
+
+        // 蛇类，
+        function Snake() {
+            // 蛇的各个方块
+            this.bodyArr = [
+                {x:3, y:8},
+                {x:3, y:7},
+                {x:3, y:6},
+                {x:3, y:5},
+                {x:3, y:4}
+            ];
+            this.direction = "right";  // 合法值是top, left, right, bottom
+
+            this.render();
+
+            this.bindEvent();
+        }
+
+        Snake.prototype.render = function () {
+            // 重置画布所有元素，都没有类名
+            for(var i = 0; i < 20; i++){
+                for(var j = 0; j < 20; j++){
+                    tds[i][j].className = "";
+                }
+            }
+            // 让身体的小格加类名
+            for(var k = 0; k < this.bodyArr.length; k++){
+                tds[this.bodyArr[k].x][this.bodyArr[k].y].className = "red";
+            }
+        };
+
+        // 更新自己
+        Snake.prototype.update = function () {
+
+            this.bodyArr.pop();
+            switch (this.direction) {
+                case "left":
+                    this.bodyArr.unshift({x: this.bodyArr[0].x , y: this.bodyArr[0].y - 1});
+                    break;
+                case "right":
+                    this.bodyArr.unshift({x: this.bodyArr[0].x  , y: this.bodyArr[0].y + 1});
+                    break;
+                case "top":
+                    this.bodyArr.unshift({x: this.bodyArr[0].x - 1 , y: this.bodyArr[0].y});
+                    break;
+                case "bottom":
+                    this.bodyArr.unshift({x: this.bodyArr[0].x + 1 , y: this.bodyArr[0].y});
+                    break;
+            }
+
+            // 检查自己有没有碰到食物
+            if(this.bodyArr[0].x === food.x && this.bodyArr[0].y === food.y){
+                this.growup();
+                food.change();
+            }
+        };
+
+        Snake.prototype.bindEvent = function () {
+
+            // 备份一下this.
+            var self = this;
+            document.onkeydown = function (event) {
+                event = event || window.event;
+                switch (event.key) {
+
+                    case "ArrowUp":
+                            if(self.direction === "bottom") return;
+                            self.direction = "top";
+                        break;
+                    case "ArrowDown":
+                            if(self.direction === "top") return;
+                            self.direction = "bottom";
+
+                        break;
+                    case "ArrowLeft":
+                            if(self.direction === "right") return;
+                            self.direction = "left";
+
+                        break;
+                    case "ArrowRight":
+                            if(self.direction === "left") return;
+                                self.direction = "right";
+                        break;
+                }
+            }
+        };
+
+        // 长大方法
+        Snake.prototype.growup = function () {
+            switch (this.direction) {
+                case "left":
+                    this.bodyArr.unshift({x: this.bodyArr[0].x , y: this.bodyArr[0].y - 1});
+                    break;
+                case "right":
+                    this.bodyArr.unshift({x: this.bodyArr[0].x  , y: this.bodyArr[0].y + 1});
+                    break;
+                case "top":
+                    this.bodyArr.unshift({x: this.bodyArr[0].x - 1 , y: this.bodyArr[0].y});
+                    break;
+                case "bottom":
+                    this.bodyArr.unshift({x: this.bodyArr[0].x + 1 , y: this.bodyArr[0].y});
+                    break;
+            }
+        };
+
+
+
+
+
+
+        // 食物类
+        function Food(x, y) {
+            this.change();
+
+        }
+
+       Food.prototype.render = function(){
+            tds[this.x][this.y].className = "blue";
+       };
+
+        Food.prototype.change = function () {
+            this.x = parseInt(Math.random() * 20);
+            this.y = parseInt(Math.random() * 20);
+
+            for(var i = 0; i < sna.bodyArr.length; i++){
+                if(this.x == sna.bodyArr[i].x && this.y == sna.bodyArr[i].y){
+                    this.change();
+                    return;
+                }
+            }
+        };
+
+
+        var sna = new Snake();
+        var food = new Food();
+
+        setInterval(function () {
+
+            sna.update();
+            sna.render();
+            food.render();
+        }, 1000)
+
+    </script>
+</body>
+</html>

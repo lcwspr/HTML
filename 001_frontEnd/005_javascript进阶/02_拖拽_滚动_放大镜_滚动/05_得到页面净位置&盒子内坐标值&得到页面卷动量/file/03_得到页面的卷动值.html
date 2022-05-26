@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 4444px;
+        }
+        h1{
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+
+    <script>
+
+        var h1 = document.getElementsByTagName('h1')[0];
+        // // 当窗口卷动的时候发生
+        window.onscroll = function () {
+
+            var scrollTop =  document.documentElement.scrollTop || document.body.scrollTop;
+            var clientTop = document.documentElement.clientHeight || document.body.clientHeight;
+            h1.innerHTML = scrollTop + clientTop;
+
+        }
+
+
+    </script>
+</body>
+</html>

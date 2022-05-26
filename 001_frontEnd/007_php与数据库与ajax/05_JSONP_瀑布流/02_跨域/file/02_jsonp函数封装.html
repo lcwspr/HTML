@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--
+        期望函数调用方式
+        myajax.jsonp("1.txt", {""}, function(data){
+        });
+    -->
+</head>
+<body>
+    <script>
+
+        // 测试函数调用
+        jsonp("1.txt", {}, "fun" ,function(){
+
+        });
+
+        // 实用轮子
+        function jsonp(URL, queryJSON, callbackName ,callback){
+            // 在window对象上面强行增加一个属性，这个属性就是全局变量，是一个函数的名字，值是一个函数。
+            window[callbackName] = callback;
+
+            // 创建添加节点
+            var scriptObj = document.createElement("script");
+            document.body.appendChild(scriptObj);
+
+            // 设置新创建的script标签的src属性，http上行请求将会发出
+            scriptObj.src = URL;
+
+            // 删除这个script标签
+            document.body.removeChild(scriptObj);
+
+
+        }
+
+
+    </script>
+</body>
+</html>

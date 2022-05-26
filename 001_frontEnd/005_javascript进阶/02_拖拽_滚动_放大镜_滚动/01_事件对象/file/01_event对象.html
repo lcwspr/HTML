@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+
+    <script type="text/javascript">
+        var h1 = document.getElementsByTagName("h1")[0];
+        // 在页面上鼠标移动的时候，触发事件
+        document.onmousemove = function (event) {
+            h1.innerHTML = "Now pos is " + event.clientX+", " + event.clientY;
+        }
+
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

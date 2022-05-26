@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        section{
+            position: relative;
+            margin-top: 50px;
+        }
+        div{
+            width: 400px;
+            height: 400px;
+            background-color: greenyellow;
+            margin: 100px;
+            cursor:default;
+        }
+    </style>
+</head>
+<body>
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+<!--<p>我是一个p</p>-->
+    <section><div></div></section>
+    <script>
+        var oDiv = document.getElementsByTagName('div')[0];
+        oDiv.onmousemove = function (event) {
+            // oDiv.innerHTML = event.clientX + "       " + event.clientY;
+            var scrollTop = document.documentElement.scrollTop;
+            var scrollLeft = document.documentElement.scrollLeft;
+
+            var x = event.clientX - getAllLeft(oDiv);
+            var y = event.clientY - getAllTop(oDiv) + scrollTop;
+
+            oDiv.innerHTML = x + "     " + y;
+
+        };
+
+        /*
+        这种写法有两种可能都会不对
+            1. 如果页面有卷动值，那么就会出现offsetTop变得很大，从而不准确
+            2. 如果offsetParent不是页面，那么就会出现不准确
+         */
+
+        function getAllTop(obj){
+            // 用于累加offsetTop
+            var allTop = obj.offsetTop;
+            var currentObj = obj;
+
+            while(currentObj = currentObj.offsetParent){
+                allTop += currentObj.offsetTop;
+            }
+            return allTop;
+        }
+
+        function getAllLeft(obj){
+            // 用于累加offsetTop
+            var allLeft = obj.offsetLeft;
+            var currentObj = obj;
+
+            while(currentObj = currentObj.offsetParent){
+                allLeft += currentObj.offsetLeft;
+            }
+            return allLeft;
+        }
+
+    </script>
+</body>
+</html>

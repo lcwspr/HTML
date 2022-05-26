@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //1. 构造函数里面如果没有this,那么就不能改隐秘创建出来的对象添加属性,但是里面的语句依旧会执行
+        function People() {
+            for(var i = 1, sum = 0; i <= 10; i++){
+                sum += i;
+            }
+            alert(sum);
+        }
+        var xiaoming = new People();
+        console.log(xiaoming);
+
+
+        //2. 构造函数中不允许出现return 语句,出现return 语句将会不能返回新创建的那个对象.
+        function Peop(name, age) {
+            this.name = name;
+            this.age = age;
+            return 4;
+        }
+
+        var mingming = new Peop("xiaoming", 34);
+        console.log(mingming);
+
+        // 3. 工厂模式
+        function P(name, age){
+            var obj = {};
+            obj.name = name;
+            obj.age = age;
+            return obj;
+        }
+        var haha = new P("lcwspr", 43);
+        console.log(haha);
+
+        // 4. 使用new调用的函数里面的语句都会执行
+        // js没有规定构造函数中的语句规范
+        function Student(name, age) {
+            this.name = name;
+            this.age = age;
+            if(this.age >= 18){
+                this.state = "成年人";
+            }else{
+                this.state = "未成年";
+            }
+        }
+
+        var hh = new Student("lcwspr", 22);
+        console.log(hh.state);
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

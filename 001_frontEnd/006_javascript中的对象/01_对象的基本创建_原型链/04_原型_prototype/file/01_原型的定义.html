@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        /* 1. 任何函数都有原型，如果函数是普通函数，那么原型没有任何作用*/
+        function fun() {
+            alert('你好');
+        }
+        fun();
+        console.log(fun.prototype);         // Object(){}
+        console.log(typeof fun.prototype);   // object
+
+
+
+        // 2. 当一个对象被new出来的时候，不仅仅执行了构造函数里面的语句，也会把这个函数的__proto__指向构造函数的prototype
+        // 我们现在感觉，构造函数的原型中，所有的属性也加给了这个对象..
+        function People(name, sex, age) {
+            this.name = name;
+            this.sex = sex;
+            this.age = age;
+        }
+
+        // 构造函数的原型,我们更改了构造函数的原型,为一个新的对象.
+        People.prototype = {
+            haha: 250
+        };
+
+        var xiaoming = new People("xiaoming", "男", 20);
+
+        console.log(xiaoming.__proto__);
+        console.log(People.prototype === xiaoming.__proto__);
+
+        // 当我们试图访问name, sex, age属性的时候,身上没有. 那么就去查找原型,原型身上有,就当做了自己的属性返回了
+        // console.log(xiaoming.name);
+        // console.log(xiaoming.sex);
+        // console.log(xiaoming.age);
+        // console.log(xiaoming.haha);
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

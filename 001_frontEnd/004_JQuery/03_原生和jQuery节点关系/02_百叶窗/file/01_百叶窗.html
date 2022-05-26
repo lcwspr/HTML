@@ -108,7 +108,7 @@
                 // var target = i <= index ? {'left': 60 * i}: {'left': 560 + 60 * (i - 1)}
                 // $(this).animate(target, 500);
             });
-            $(this).children('.mask').stop(true).fadeTo(500, 0);
+            $(this).children('.mask').stop(true).fadeOut(500);
         });
 
         // 变量，碰到的这个li的儿子.mask变亮
@@ -118,8 +118,7 @@
                 $(this).animate({"left" : 160 * i},500);
             });
             $(this).children('.mask').stop(true).fadeTo(500,0.6)
-        })
-
+        });
 
 	</script>
 </body>

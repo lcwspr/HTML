@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script src="../../../../999_js/underscore.js"></script>
+    <script>
+        var arr = ["东风", "南风", "西风", "北风"];
+
+        _.each(arr, function (i) {
+            console.log(i);
+        });
+
+        var arrFun = _.map(arr, function (i) {
+            return i + "哈哈";
+        });
+        console.log(arrFun);
+
+        // 删除某一项,返回一个删除所有valus值后的array副本
+        _.without([1, 2, 3, 4, 3, 2, 4, 5, 2], 2, 3);
+        // [1, 4, 4, 5 ]
+
+
+    </script>
+</body>
+</html>
+
+

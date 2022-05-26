@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="ajax.js"></script>
+<script>
+    ajax.post("test.php", {"名&字=": "王春龙", "old": 20},function (err, data) {
+        if(err){
+            alert("not't find file !");
+            return ;
+        }else{
+            document.body.innerHTML = data;
+        }
+    });
+</script>
+</body>
+</html>

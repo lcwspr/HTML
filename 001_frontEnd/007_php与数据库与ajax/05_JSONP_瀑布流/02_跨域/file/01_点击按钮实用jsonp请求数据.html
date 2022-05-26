@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="按我">
+
+    <script type="text/javascript">
+        // 得到按钮
+        var btn = document.getElementById("btn");
+
+        // 按钮监听
+        btn.onclick = function(){
+            // 创建一个script标签
+            var scriptObj = document.createElement("script");
+            document.body.appendChild(scriptObj);
+
+            // 一个script标签如果没有src属性将会什么都不做
+            // 一个script标签一旦设置src属性，将会立刻发起http请求
+
+            scriptObj.src ="1.txt";
+        }
+
+
+    </script>
+</body>
+</html>

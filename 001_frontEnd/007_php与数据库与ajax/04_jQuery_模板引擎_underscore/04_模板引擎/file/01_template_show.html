@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var str = "我好高兴呀，我买了一个iphone6s,花了6000元钱，用了三天坏了";
+        str = str.replace(/\d+/g, function (match, startIndex, originstring) {
+            // return   替换的数据
+        });
+
+
+        // 模板
+        var s = "好@name@啊， 高兴啊，我买了一个@thing@, 花了@money@元钱";
+
+        // 字典
+        var dict = {
+            "name": "高兴",
+            "thing": "vivo手机",
+            "money": 9888
+        };
+
+        // 数据绑定
+        s = s.replace(/@([a-z]+)@/g, function (match, $1, startIndex, originString) {
+            console.log(match, $1, startIndex, originString);
+            return dict[$1];
+        });
+
+        console.log(s);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            height: 5555px;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+        
+        
+    </style>
+</head>
+<body>
+
+    <div></div>
+    <a href="1.html">hello world</a>
+    <script>
+        document.getElementsByTagName('div')[0].onmousewheel = function (event) {
+            event.preventDefault();
+        };
+
+        document.getElementsByTagName('a')[0].onclick = function (event) {
+            event.preventDefault();
+        }
+    </script>
+</body>
+</html>

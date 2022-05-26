@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		body{
+			background-color: #ccc;
+		}
+
+		.waterFall{
+			width: 790px;
+			margin: 0 auto;
+			position: relative;
+		}
+
+		.waterFall .grid{
+			position: absolute;
+			width: 230px;
+			background-color: white;
+			padding: 10px;
+			border-radius: 15px;
+		}
+
+		.waterFall .grid img{
+			width: 230px;	
+		}
+
+		.waterFall .grid .title{
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 32px;
+		}
+
+		.waterFall .grid .content{
+			line-height: 150%;
+			font-size: 14px;
+			margin-bottom: 20px;
+		}
+		.waterFall .grid .author{
+			float: right;
+			color: orange;
+			font-size: 12px;
+		}
+		.loading{
+			margin: 0 auto;
+			width: 400px;
+			line-height: 30px;
+			text-align: center;
+			font-size: 14px;
+			background-color: #ccc;
+			color: white;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="waterFall" id="waterFall">
+		
+	</div>
+	<div class="loading" id="loading">正在加载</div>
+
+	<script type="text/template" id="grid_template">
+		<div class="grid">
+			<img src="<%= imgurl %>" alt="">
+			<p class="title"><%= title %></p>
+			<p class="content"><%= content %></p>
+			<p class="author"><%= author %></p>
+		</div>
+	</script>
+
+	<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="js/underscore.js"></script>
+
+	<script type="text/javascript">
+
+		// 得到大盒子
+		var $waterFall = $("#waterFall");
+	
+		// 得到模板字符串
+		var $templateString = $("#grid_template").html();
+
+		// 获得loading图
+		var $loading = $("#loading");
+
+		// 生成数据绑定函数
+		var compile = _.template($templateString);
+		
+		// 三列瀑布流， 每列的总高度
+		var colHeight = [0, 0, 0];
+
+
+		// 当前显示的信号量
+		var page = 1;
+		var lock = true;   // 设置锁，用于显示完和函数截流
+
+
+		getJsonAndRender(page);
+
+		function getJsonAndRender(page){
+			$loading.show();
+			// 发出ajax请求
+			$.get("json/json"+ page +".txt", function(data){
+				var obj = eval("(" + data + ")");
+
+				if(!obj.news.length){
+					$loading.html("没有数据了");
+					return;
+				}
+				var num = 0;
+				_.each(obj.news, function(dictionary){
+					// 竞速策略，谁先加载完毕，我先处理谁
+					// 这是系统内置的构造函数
+					var image = new Image();
+					image.src = dictionary.imgurl;
+					$(image).load(function(){
+						// 此时这个图片加载完毕了，那么我就先处理这个图片
+						var domString = compile(dictionary);
+						// 上dom
+						var $grid = $(domString)
+						$waterFall.append($grid);
+						// 根据瀑布流算法，设置top值，left值
+						var minValue = _.min(colHeight);
+						var minIndex = _.indexOf(colHeight, minValue);
+					
+						// 设置位置
+						$grid.css({
+							"left": minIndex * 270,
+							"top": minValue
+						});
+						// 更新已经显示图片的高度
+						colHeight[minIndex] += $grid.innerHeight() + 20;
+						num ++;
+						if(num === 20){
+							lock = true;
+							$loading.hide();
+						}
+
+						// 让大盒子根据最高的列设置高度
+						$waterFall.css("height", _.max(colHeight));
+
+					})
+				});	
+			})
+		}
+
+
+		// 监听滚动
+		$(window).scroll(function(){
+			if(!lock) return;
+			var rate = $(window).scrollTop() / ($(document).height() - $(window).height());
+			if(rate > 0.7){
+				lock = false;  // 关闭锁
+				page ++;
+				getJsonAndRender(page);
+			}
+		});
+	</script>
+</body>
+</html>

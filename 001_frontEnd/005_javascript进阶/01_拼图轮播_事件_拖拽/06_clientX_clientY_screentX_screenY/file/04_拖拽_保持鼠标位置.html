@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<script>
+    // 得到元素
+    var oDiv = document.getElementsByTagName('div')[0];
+
+    // 监听里面放置监听，js的奇淫技巧
+    // 当oDiv里里面触发了onmousedown事件的情况下，document才有onmousemove事件
+    // 鼠标按下的时候，移动才有作用
+    oDiv.onmousedown = function (event){
+
+        var leftDiff = event.clientX - oDiv.offsetLeft;
+        var topDiff = event.clientY - oDiv.offsetTop;
+
+
+
+        document.onmousemove = function (event) {
+
+            var nowLeft = event.clientX - leftDiff;
+            var nowTop = event.clientY -topDiff;
+
+            nowLeft = nowLeft >= 0 ? nowLeft : 0;
+            nowTop = nowTop >= 0 ? nowTop : 0;
+
+            oDiv.style.left = nowLeft  + "px";
+            oDiv.style.top = nowTop + "px";
+        }
+    };
+    oDiv.onmouseup = function () {
+        document.onmousemove = null;
+    }
+
+</script>
+</body>
+</html>

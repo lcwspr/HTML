@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/carousel.css">
+
+</head>
+<body>
+<!--注意： 只需要给最大的盒子加id其他的盒子都是向下找的，一律都不要给id-->
+<div class="carousel" id="carousel">
+    <div class="btns">
+        <a href="javascript:void(0);" class="leftBtn"></a>
+        <a href="javascript:void(0);" class="rightBtn"></a>
+    </div>
+    <div class="imageList">
+        <ul>
+            <li class="first"><a href="#"><img src="../../../../999_img/dog/0.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../../../../999_img/dog/1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../../../../999_img/dog/2.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../../../../999_img/dog/3.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../../../../999_img/dog/4.jpg" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="circles">
+        <ol>
+            <li class="current"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+</div>
+    <script src="js/slider.js"></script>
+    <script type="text/javascript">
+        // 也就是说，想要复用js代码，那么类名是不能随便起的。如果想要有其他的样式，可以另外新加一个类名
+        new Slider({
+            "ID"                : "carousel",
+            "autoplayInterval"  : 2000,
+            "animateTime"       : 500,
+            "width"             : 560,
+
+        });
+    </script>
+
+<div class="carousel" id="carousel2">
+    <div class="imageList">
+        <ul>
+            <li class="first"><a href="#"><img src="../../../../999_img/dog/0.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../../../../999_img/dog/1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../../../../999_img/dog/2.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../../../../999_img/dog/3.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../../../../999_img/dog/4.jpg" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="circles">
+        <ol>
+            <li class="current"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+</div>
+    <script type="text/javascript">
+        // 也就是说，想要复用js代码，那么类名是不能随便起的。如果想要有其他的样式，可以另外新加一个类名
+        new Slider({
+            "ID"                : "carousel",
+            "autoplayInterval"  : 2000,
+            "animateTime"       : 500,
+            "width"             : 560,
+
+        });
+    </script>
+</body>
+</html>

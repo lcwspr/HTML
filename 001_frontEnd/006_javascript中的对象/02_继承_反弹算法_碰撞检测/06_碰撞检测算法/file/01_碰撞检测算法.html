@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 600px;
+            height: 400px;
+            border: 1px solid #000;
+            position: relative;
+            margin: 100px auto;
+        }
+        p{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            border: 1px solid #000;
+            border-radius: 50%;
+            top: 100px;
+            left: 100px;
+        }
+
+        .block{
+            position: absolute;
+            width: 150px;
+            height: 80px;
+            background-color: brown;
+            top: 200px;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="block" id="block"></div>
+    </div>
+
+    <script>
+        var oBox = document.getElementById('box');
+        var oBlock = document.getElementById('block');
+
+        // 小球的构造函数
+        function Ball(left, top){
+            this.left = left || 200 * Math.random() + 50;
+            this.top = top || 200* Math.random() + 50;
+
+            this.angle = Math.random() * (180 + 1);
+            this.speed = Math.random() *(11);
+
+            // 每步移动的x分量，y分量
+            this.deltaX = Math.sin(degreeToRad(this.angle)) * this.speed;
+            this.deltaY = Math.cos(degreeToRad(this.angle)) * this.speed;
+
+            // 直径
+            this.d = 42;
+
+            this.init();
+            // 将对象本身的抽象属性渲染到dom元素上
+            this.render();
+            // 小球移动
+            this.move()
+        }
+
+        Ball.prototype.init = function(){
+            this.dom = document.createElement("p");
+            oBox.appendChild(this.dom);
+        };
+
+        Ball.prototype.render = function () {
+            // render的本质就是把自己的left属性，top属性作用到自己的dom的style身上
+            this.dom.style.left = this.left + "px";
+            this.dom.style.top = this.top + "px";
+        };
+
+        Ball.prototype.move = function () {
+            var self = this;
+            setInterval(function () {
+                self.left += self.deltaX;
+                self.top += self.deltaY;
+
+                // 碰边的检测
+                    // 碰到边界的检测
+                if(self.top >= oBox.clientHeight - self.d){
+                    self.deltaY = -self.deltaY;
+                    self.top = oBox.clientHeight - self.d;
+                }
+                if(self.top <= 0){
+                    self.deltaY = -self.deltaY;
+                    self.top = 0;
+                }
+                if(self.left >= oBox.clientWidth - self.d ){
+                    self.deltaX = -self.deltaX;
+                    self.left = oBox.clientWidth - self.d;
+                }
+                if(self.left <= 0){
+                    self.deltaX = -self.deltaX;
+                    self.left = 0;
+                }
+
+
+                // 碰撞检测
+                    // 碰触到了盒子的上边界
+                if(self.top >= oBlock.offsetTop - self.d
+                    && self.top <= oBlock.offsetTop
+                    && self.left >= oBlock.offsetLeft - self.d
+                    && self.left <= oBlock.offsetLeft + oBlock.clientWidth){
+
+                    self.deltaY = -self.deltaY;
+                }
+
+                    // 触碰到了盒子的下边界
+                if(
+                    self.top > oBlock.offsetTop
+                    && self.top <= oBlock.offsetTop + oBlock.clientHeight
+                    && self.left >= oBlock.offsetLeft - self.d
+                    && self.left <= oBlock.offsetLeft + oBlock.clientWidth
+                ){
+                    self.deltaY = -self.deltaY;
+                }
+
+                    // 碰到了左边框
+                if(
+                    self.top >= oBlock.offsetTop - self.d
+                    && self.top <= oBlock.offsetTop + oBlock.clientHeight
+                    && self.left >= oBlock.offsetLeft - self.d
+                    && self.left <= oBlock.offsetLeft
+                ){
+                    self.deltaX = -self.deltaX;
+                }
+
+                    // 右边界
+                if(
+                    self.top >= oBlock.offsetTop - self.d
+                    && self.top <= oBlock.offsetTop + oBlock.clientHeight
+                    && self.left >= oBlock.offsetLeft
+                    && self.left <= oBlock.offsetLeft + oBlock.clientWidth
+                ){
+                    self.deltaX = -self.deltaX;
+                }
+
+                self.render();
+            }, 30);
+        };
+
+        oBox.onclick = function (event) {
+            new Ball(event.offsetX, event.offsetY);
+        };
+
+        function degreeToRad(degree) {
+            return degree * Math.PI / 180;
+        }
+
+    </script>
+</body>
+</html>
+

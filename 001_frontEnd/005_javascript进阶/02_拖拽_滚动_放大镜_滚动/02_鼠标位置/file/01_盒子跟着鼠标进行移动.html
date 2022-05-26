@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            height: 5555px;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 111px;
+            left: 222px;
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        document.onmousemove = function (event) {
+
+            // 如果页面很高，那么就不会跟随鼠标，因为此时的鼠标的坐标系是以视口参考的位置
+            var oDiv = document.getElementsByTagName('div')[0];
+
+            event = event || window.event;
+            console.log(event.clientX +"    "+event.clientY);
+
+            oDiv.style.left =event.clientX + "px";
+            oDiv.style.top = event.clientY + "px";
+
+        }
+    </script>
+</body>
+</html>

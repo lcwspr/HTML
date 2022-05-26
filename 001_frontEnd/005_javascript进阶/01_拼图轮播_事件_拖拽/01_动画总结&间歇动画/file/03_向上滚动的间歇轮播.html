@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .carousel{
+            position: relative;
+            width: 290px;
+            height: 115px;
+            border: 1px solid #000;
+            margin: 100px auto;
+
+        }
+        .carousel ul{
+            position: absolute;
+            list-style: none;
+            width: 300px;
+            top: 0;
+            left: 0;
+        }
+        .carousel ul li{
+            float: left;
+            margin-right: 10px;
+            width: 90px;
+            height: 115px;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <ul>
+            <li><a href=""><img src="../img/0.png" alt=""></a></li>
+            <li><a href=""><img src="../img/1.png" alt=""></a></li>
+            <li><a href=""><img src="../img/2.png" alt=""></a></li>
+            <li><a href=""><img src="../img/3.png" alt=""></a></li>
+            <li><a href=""><img src="../img/4.png" alt=""></a></li>
+            <li><a href=""><img src="../img/5.png" alt=""></a></li>
+            <li><a href=""><img src="../img/6.png" alt=""></a></li>
+            <li><a href=""><img src="../img/7.png" alt=""></a></li>
+        </ul>
+    </div>
+
+    <script src="../../../../999_js/jquery-1.12.3.min.js"></script>
+    <script>
+        // 提出配置参数
+        var option = {
+            'imgHeight': 125,
+            'interval': 1500,
+            'animateTime': 500
+        };
+
+        // ul
+        var $oUl = $("ul");
+
+        // 原有图片的张数目
+        var length = $("ul li").length;
+
+        // 添加空li，防止穿帮
+        if(length % 3 === 1){
+            $("<li></li><li></li>").appendTo($oUl);
+        }else if(length % 3 === 2){
+            $("<li></li>").appendTo($oUl);
+        }
+
+        $("ul li:lt(3)").clone(true).appendTo($oUl);
+
+
+        // 信号量
+        var idx = 0;
+
+        function move(){
+            idx++;
+            $oUl.animate({"top": -option.imgHeight * idx}, option.animatetime,function () {
+                if(idx >= Math.ceil(length / 3)){
+                    $(this).css("top", 0);
+                    idx = 0;
+                }
+            });
+        }
+
+        // 鼠标进入  设置监听器
+        var timer = setInterval(move, option.interval);
+        $(".carousel").mouseenter(function () {
+            clearInterval(timer);
+            timer = 0;
+        });
+        // 鼠标进入，停止监听器
+        $(".carousel").mouseleave(function () {
+            if(timer){
+                clearInterval(timer);
+            }
+            timer = setInterval(move, option.interval);
+        })
+    </script>
+</body>
+</html>

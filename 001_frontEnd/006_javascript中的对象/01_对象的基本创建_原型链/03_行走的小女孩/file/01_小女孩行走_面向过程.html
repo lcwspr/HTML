@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 79px;
+            height: 108px;
+            background: url("../img/girl.png") 0 -216px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+
+    <script>
+        var oDiv = document.getElementsByTagName('div')[0];
+
+        var nowLeft = 0;
+        var buzi = 0;
+
+        setInterval(function () {
+            nowLeft +=2;
+            buzi += 1;
+            if(buzi > 7){
+                buzi = 0;
+            }
+            oDiv.style.left =nowLeft + "px";
+            oDiv.style.backgroundPositionX = buzi * 79 + "px";
+        }, 40);
+    </script>
+</body>
+</html>

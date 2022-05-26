@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		table,tr,td{
+			border-collapse: collapse;
+			border: 1px solid #ccc;
+		}
+		table{
+			margin: 0 auto;
+		}
+		td{
+			line-height: 25px;
+		}
+	</style>
+</head>
+<body>
+	<table id="myTable">
+		<caption>小留言板</caption>
+		<tr>
+			<td>ID</td>
+			<td>姓名</td>
+			<td>时间</td>
+			<td>qq</td>
+			<td>content</td>
+			<td></td>
+		</tr>
+	</table>
+	<script type="text/javascript" src="js/ajax.js"></script>
+	<script type="text/javascript">
+
+		var oTable = document.getElementById("myTable");
+
+		// 读取接口
+		ajax.get("do/read.php", {"order": 0}, function(err, data){
+			if(err) return;
+			var resJSON = eval("("+ data +")");
+			for(var i = 0; i < resJSON.res.length; i++){
+				oTable.innerHTML += 
+					["<tr>",
+					"	<td>"+ resJSON.res[i].id +"</td>",
+					"	<td>" + resJSON.res[i].name + "</td>",
+					"	<td>" + resJSON.res[i].date + "</td>",
+					"	<td>" + resJSON.res[i].qq + "</td>",
+					"	<td>" + resJSON.res[i].content + "</td>",
+					/*"	<td><a href='do/delete.php?id=" + resJSON.res[i].id +"'>删除</a></td>",*/
+					"	<td><a deleteId=" + resJSON.res[i].id + " href='javascript:void(0);' class='delete'>删除</a></td>",
+					"</tr>"].join("")
+			}
+
+			// dom组建完成，给a标签添加点击事件。
+			var deleteKeys = document.getElementsByClassName('delete');
+
+			// 循环语句添加链接a标签删除事件
+			for(var i = 0; i < deleteKeys.length; i++){
+
+				deleteKeys[i].onclick = function(){
+					var self = this;
+					var a = confirm("你确定要删除吗?");
+					if(a){
+						ajax.get("do/delete.php", {"id": this.getAttribute("deleteId")}, function(err, data){
+							if(data == "ok"){
+								self.parentNode.parentNode.parentNode.removeChild(self.parentNode.parentNode);
+							}else{
+								alert('false');
+							}
+						}); 
+					}
+					
+				};
+			}
+
+
+		})
+
+	</script>
+</body>
+</html>

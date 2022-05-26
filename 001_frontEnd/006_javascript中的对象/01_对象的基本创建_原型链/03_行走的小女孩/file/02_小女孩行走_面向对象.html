@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 79px;
+            height: 108px;
+            background: url("../img/girl.png") 0 -216px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+
+        // 对象自己管理自己
+        function Girl(top, left) {
+            this.top = top;
+            this.left = left;
+            this.buzi = 0;
+            this.timer = null;
+
+            // 自己的初始化
+            this.init = function () {
+                // 创建div，添加div
+                this.dom = document.createElement("div");
+                document.body.appendChild(this.dom);
+                // 创建样式
+                this.dom.style.left = this.left + "px";
+                this.dom.style.top = this.top + "px";
+
+                return this;
+            };
+
+            // 设置运动的方法
+            this.animated = function () {
+                var self = this;
+                this.timer = setInterval(function () {
+                    // 设置位置
+                    self.left += 2;
+                    self.dom.style.left = self.left +"px";
+
+                    // 设置背景切换
+                    self.buzi += 1;
+                    if(self.buzi > 7){
+                        buziz = 0;
+                    }
+
+                    if(self.left > 1000){
+                        self.die();
+                    }
+                    self.dom.style.backgroundPositionX = - self.buzi * 79 + "px";
+
+                }, 5);
+
+                return this;
+            };
+
+            this.die = function () {
+                clearInterval(this.timer);
+                document.body.removeChild(this.dom);
+            }
+        }
+
+        setInterval(function () {
+            new Girl(Math.random() * document.documentElement.clientHeight * 0.8, Math.random() * document.documentElement.clientWidth * 0.4).init().animated();
+        }, 400);
+
+
+    </script>
+</body>
+</html>

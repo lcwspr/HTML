@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // xiaoming 和 mengmeng 两个对象，都有相同的属性名，方法名
+        // 但这样创建非常不方便，由构造函数来解决
+        var xiaoming = {
+            name : "小明",
+            sex: "男",
+            age: 18,
+            sayHello: function () {
+                console.log('我是' + this.name + "hello");
+            },
+            grow: function () {
+                this.old ++;
+            }
+        };
+
+        var honghong = {
+            name : "红红",
+            sex: "女",
+            age: 34,
+            sayHello: function () {
+                console.log('我是' + this.name + "hello");
+            },
+            grow: function () {
+                this.old ++;
+            }
+        };
+
+        xiaoming.sayHello();
+        honghong.sayHello();
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

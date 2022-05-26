@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table,tr,td{
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+        .special{
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <table id="showTable">
+        <tr>
+            <td>学号</td>
+            <td>姓名</td>
+            <td>年龄</td>
+            <td>性别</td>
+        </tr>
+    </table>
+
+    <!-- 工程上面，我们使用一个故意写错type属性的script标签存放模板  -->
+    <script type="text/template" id="template">
+        <tr class="<%= className %>">
+            <td><%= id %></td>
+            <td><%= name %></td>
+            <td><%= old %></td>
+            <td><%= sex %></td>
+        </tr>
+    </script>
+
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="js/underscore.js"></script>
+    <script type="text/javascript">
+    	// 生成数据绑定函数
+    	var compile = _.template($("#template").html());
+
+    	// Ajax读取字典
+    	$.get("test.json", function(data){
+    		// 通过调用underscore里面的Each函数，迭代data.result数组
+    		_.each(data.result, function(dictionary){
+    			// 模板修正操作
+    			// 给字典补一个属性，补一个className属性，这个属性的值根据old属性确定
+    			dictionary.className = dictionary.old < 18 ?  "" : "special";
+
+    			// 进行数据绑定
+    			var dom = compile(dictionary);
+    			$("#showTable").append($(dom));
+    		})
+    	});
+
+
+    </script>
+</body>
+</html>
+

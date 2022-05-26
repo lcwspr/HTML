@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0px;
+        }
+        body{
+            height: 5000px;
+            background: url("../../06_京东商品放大特效/img/xiao.jpg");
+        }
+        input[type=button]{
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            top: 50%;
+            margin-top: -25px;
+            background-color: #ccc;
+
+        }
+
+        .backToTop{
+            position: fixed;
+            width: 59px;
+            height: 91px;
+            background: url(../img/rocket.png) -32px -45px;
+            right: 10px;
+            bottom: 30px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="该走了" id="btn">
+    <a href="javascript:void(0);" class="backToTop" id="backToTop"></a>
+    
+
+    <script src="../../../../999_js/tween.js"></script>
+
+    <script>
+
+        var btn =document.getElementById('btn');
+        var oBackToTop = document.getElementById('backToTop');
+
+        btn.onclick = function () {
+            scrollAnimate(3000, 2000);
+        };
+
+        oBackToTop.onclick = function () {
+            oBackToTop.style.backgroundPositionX = "-179px";
+            scrollAnimate(0, 1000, function () {
+                oBackToTop.style.backgroundPositionX = "-32px";
+            });
+        };
+
+        window.onscroll = function () {
+            var st = document.body.scrollTop || document.documentElement.scrollTop;
+            if(st > 500){
+                oBackToTop.style.display = "block";
+            }else {
+                oBackToTop.style.display = "none";
+            }
+
+        }
+
+        // 步长的思考模式  下一步比上一步增长了多少
+        // 这一帧应该在哪
+
+        // t当前帧数
+        // b初始位置
+        // c总步长
+        // d总的移动帧数
+
+        function scrollAnimate(target, time, tween, func) {
+
+            if(arguments.length < 2){
+                throw new Error('别瞎传');
+            }else if(arguments.length === 2) {
+                tween = "Linear";
+                func = undefined;
+            }
+            else if(arguments.length === 3){
+
+                if(typeof(arguments[2]) === "string"){
+                    tween = arguments[2];
+                    func = undefined;
+                }else if(typeof(arguments[2]) === 'function'){
+                    console.log(1);
+                    func = arguments[2];
+                    tween = "Linear";
+                }
+            }
+
+            var nowFrame = 0;
+            var start = document.documentElement.scrollTop || document.body.scrollTop;
+            var distance = target - start;
+            var interval = 10;    // 帧率为100帧
+            var maxFrame = time /interval;
+
+            clearInterval(timer);
+            var timer = setInterval(function () {
+
+                nowFrame ++;
+                document.body.scrollTop = document.documentElement.scrollTop = Tween[tween](nowFrame, start, distance, maxFrame);
+
+                if(nowFrame === maxFrame) {
+                    clearInterval(timer);
+                    console.log(func);
+                    if(func)
+                        func();
+                }
+
+            }, interval)
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .smallPic{
+            position: relative;
+            border: 1px solid #000;
+            width: 350px;
+            height: 350px;
+            margin: 100px;
+        }
+        .smallPic .zoom{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 0;
+            left: 0;
+            background-color: #fede4f;
+            opacity: 0.5;
+            border: 1px solid #000;
+        }
+        .bigPic{
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: url(../img/da.jpg) 0 0;
+            display: none;
+            top: 0;
+            left: 400px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>
+<p>ejiewijoioeoie</p>d
+    <div class="smallPic" id="smallPic">
+        <img src="../img/xiao.jpg" alt="">
+        <div class="zoom" id="zoom"></div>
+        <div class="bigPic" id="bigPic"></div>
+    </div>
+
+    <script src="../../../../999_js/fetchComputedStyle.js"></script>
+    <script>
+
+        // 获取元素
+        var oSmallPic = document.getElementById('smallPic');
+        var oZoom = document.getElementById('zoom');
+        var oBigPic = document.getElementById('bigPic');
+
+
+        // 当鼠标移入移出的时候，设置大的显示图
+        oSmallPic.onmouseenter = function(){
+            oBigPic.style.display = "block";
+        };
+        oSmallPic.onmouseleave = function(){
+            oBigPic.style.display = "none";
+        };
+
+        // 依据比例设置显示放大图的大小
+
+        var rateOption = {
+            samllPicWidth: parseInt(fetchComputedStyle(oSmallPic,'width')),
+            samllPicHeight: parseInt(fetchComputedStyle(oSmallPic,'height')),
+            zoomWidth : parseInt(fetchComputedStyle(oZoom, 'width')),
+            zoomHeight : parseInt(fetchComputedStyle(oZoom, 'height')),
+            BigPicWidth: 800,
+            BigPicHeight: 800
+        };
+
+        oBigPic.style.width = rateOption.zoomWidth / rateOption.samllPicWidth * rateOption.BigPicWidth + "px";
+        oBigPic.style.height = rateOption.zoomHeight / rateOption.samllPicHeight * rateOption.BigPicHeight + "px";
+
+
+
+        // 监听
+        oSmallPic.onmousemove = function (event) {
+
+            // 这两个值基本不能用，因为onmousemove事件会冒泡，鼠标碰到zoom这个盒子的时候事件会往上传播，又会触发smallPic的onmousemove事件。
+            // 此时event.offsetX的坐标，以zoom左上角为准
+            event = event || window.event;
+            // var x = event.offsetX - 50;
+            // var y = event.offsetY - 50;
+
+            var scrollTop = document.documentElement.scrollTop;
+            var x = event.clientX - getAllLeft(oSmallPic) - 100;
+            var y = event.clientY - getAllTop(oSmallPic) + scrollTop - 100;
+
+            // 处理边界值
+            x = x < 0 ?0 : x; y = y < 0 ?0 : y; x = x > 150 ? 150 : x; y = y > 150 ? 150 : y;
+
+            oZoom.style.left  = x + "px";
+            oZoom.style.top  = y + "px";
+
+            oBigPic.style.backgroundPosition = - x / rateOption.samllPicWidth * rateOption.BigPicWidth +"px " + - y / rateOption.samllPicHeight * rateOption.BigPicHeight+"px"
+
+        };
+
+
+
+        function getAllTop(obj){
+            // 用于累加offsetTop
+            var allTop = obj.offsetTop;
+            var currentObj = obj;
+
+            while(currentObj = currentObj.offsetParent){
+                allTop += currentObj.offsetTop;
+            }
+            return allTop;
+        }
+
+        function getAllLeft(obj){
+            // 用于累加offsetTop
+            var allLeft = obj.offsetLeft;
+            var currentObj = obj;
+
+            while(currentObj = currentObj.offsetParent){
+                allLeft += currentObj.offsetLeft;
+            }
+            return allLeft;
+        }
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

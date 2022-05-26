@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var xiaoming = {
+            name: "xiaoming",
+            age: 18,
+            sex: "男",
+            sayHello: function () {
+                console.log("你好，我是" + this.name);
+                console.log("，今年" + this.age + "岁了，");
+                console.log("我是可爱的小"+this.sex+"生。");
+            }
+        };
+
+        xiaoming.sayHello();
+    //    上面的案例，sayHello就是一个属性，只不过他的值是一个函数，所以我们就可以说xiaoming这个对象，有sayHello方法。
+    //    一个对象，方法函数里面的this指向的是这个对象。
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

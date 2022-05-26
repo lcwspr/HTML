@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            var form = document.getElementById("form");
+            var phone = document.getElementById('phone');
+            var qqTxt = document.getElementById('qq');
+
+            // 当表单提交的时候
+            form.onsubmit = function () {
+                var shoujihao = phone.value;
+                var qq = qqTxt.value;
+
+                if(!/^1\d{10}$/.test(shoujihao)){
+                    alert('请输入正确的手机号');
+                    return false;
+                }
+
+                if(!/^\d{5,11}$/.test(qq)){
+                    alert('请输入正确的手机号');
+                    return false;
+                }
+
+                return true;
+            };
+        }
+    </script>
+</head>
+<body>
+    <form action="1.php" id="form">
+        <p>手机号：<input type="text" name="" id="phone"/></p>
+        <p>QQ号：<input type="text" name="" id="qq"/></p>
+        <p>
+            <input type="submit" value="提交">
+        </p>
+
+    </form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

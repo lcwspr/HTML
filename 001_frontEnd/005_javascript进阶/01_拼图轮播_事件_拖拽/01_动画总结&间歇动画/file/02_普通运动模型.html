@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            height: 300px;
+            width: 0;
+            position: absolute;
+            border: 1px solid #000;
+            background-color: red;
+            top: 50%;
+            margin-top: -150px;
+        }
+        .box .content{
+            width: 0;
+            height: 300px;
+            background-color: pink;
+        }
+        .box .show{
+            width: 30px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            background-color: yellow;
+            top: 50%;
+            margin-top: -50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="content"></div>
+        <div class="show"></div>
+    </div>
+
+    <script src="../../../../999_js/jquery-1.12.3.min.js"></script>
+
+    <script>
+        $(".show").mouseenter(function () {
+            $(".box").stop(true).animate({'width':330},500);
+            $(".content").stop(true).animate({'width':300},500);
+            $(".show").stop(true).animate({'left':300},500);
+        });
+
+        $(".box").mouseleave(function () {
+            $(".box").animate({'width':30}, 500);
+            $(".box .content").animate({'width': 0}, 500);
+            $(".show").animate({'left':0}, 500);
+        })
+    </script>
+</body>
+</html>

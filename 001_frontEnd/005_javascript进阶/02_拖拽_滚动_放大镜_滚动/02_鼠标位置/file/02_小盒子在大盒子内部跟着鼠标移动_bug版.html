@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        div{
+            width: 500px;
+            height: 400px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            position: relative;
+            margin-top: 4000px;
+        }
+
+        div p{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p></p>
+    </div>
+
+    <script>
+
+        // 但是， 如果此时不是在浏览器显示窗口的第一屏，那么鼠标位置依旧是依据浏览器显示来的
+        // 而offsetTop值还是到父盒子的高度，那么就会减掉特别多
+
+        var oDiv = document.getElementsByTagName('div')[0];
+        var oP = document.getElementsByTagName('p')[0];
+
+        oDiv.onmousedown = function (event) {
+            event = event || window.event;
+
+            oDiv.onmousemove = function (event) {
+                event = event || window.event;
+
+
+                oP.style.left = event.clientX - oDiv.offsetLeft + "px";
+                oP.style.top = event.clientY - oDiv.offsetTop + "px";
+            }
+
+        };
+        oDiv.onmouseup = function () {
+            oDiv.onmousemove = null;
+        };
+    </script>
+</body>
+</html>

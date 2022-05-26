@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .balloon{
+            width: 81px;
+            height: 119px;
+            background: url(../img/balloon.png);
+            position: absolute;
+            top: 600px;
+            left: 200px;
+        }
+        h1{
+            color: deeppink;;
+            font-size: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>0</h1>
+    <div class="balloon"></div>
+
+    <script>
+
+        // 面向过程方式，这样对于每个个体都需要重复编写代码，代码组织十分不方便
+        var oDiv = document.getElementsByTagName('div')[0];
+
+        var a = 600;
+        setInterval(function () {
+            a --;
+            oDiv.style.top = a + "px";
+        }, 10);
+
+        // 当页面上出现功能类型，属性类型，什么都类似的东西
+        // 应该封装成为一个类
+
+        var oH1 = document.getElementsByTagName('h1')[0];
+        var allScore = 0;
+
+        function Balloon() {
+            this.top = 600;
+            this.left = Math.random() * 1200;
+            this.score = parseInt(Math.random() * 8) + 1;
+
+            this.init();
+            this.fly()
+        }
+
+        // 初始化方法
+        Balloon.prototype.init = function () {
+            // 创建dom
+            this.dom = document.createElement("div");
+            this.dom.className = "balloon";
+
+            // 追加这个dom元素
+            document.body.appendChild(this.dom);
+
+            this.dom.style.left = this.left + "px";
+            this.dom.style.left = this.left + "px";
+
+            // 根据分数求取背景位置,分数其实是和真实分数差1的
+            var x = - (this.score - 1) % 4 * 96;
+            var y = - parseInt((this.score - 1) / 4) * 120;
+
+            this.dom.style.backgroundPosition = x + "px " + y + "px";
+
+
+            // 绑定监听
+            var self = this;
+            this.dom.onclick = function () {
+                self.bomb();
+                allScore += self.score;
+                oH1.innerHTML = allScore;
+            };
+
+        };
+
+        Balloon.prototype.fly = function () {
+            // 备份this
+            var self = this;
+            this.timer = setInterval(function () {
+                self.top -= self.score * 0.3;
+                if(self.top < -100){
+                    self.bomb();
+                }
+                self.dom.style.top = self.top + "px";
+            })
+        };
+
+        // 爆炸方法
+        Balloon.prototype.bomb = function(){
+            clearInterval(this.timer);
+            // 移除DOM
+            document.body.removeChild(this.dom);
+        };
+
+        // 点击之后的事情
+        // Balloon.prototype.clickHundler = function(){
+        //     this.bomb();
+        // };
+
+
+        setInterval(function () {
+            new Balloon();
+        }, 400);
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

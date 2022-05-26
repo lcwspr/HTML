@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function People(name, age) {
+            this.name = name;
+            this.age = age;
+            this.sayHello = function () {
+                console.log("你好我是"+this.name+"我今年"+this.age+"岁");
+            }
+        }
+
+        var xiaoming = new People("小明", 12);
+        var honghong = new People("红红", 45);
+
+        alert(xiaoming.sayHello === honghong.sayHello);   // false
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        div{
+            position: absolute;
+            width: 56px;
+            height: 30px;
+            background-image: url(../../../../999_img/dog/0.jpg);
+        }
+
+        p{
+            border: 1px solid #000;
+            position: relative;
+            width: 560px;
+            height: 300px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <p></p>
+    <script src="../../../../999_js/jquery-1.12.3.min.js"></script>
+    <script>
+        // 通过for循环创建节点
+       for(var row = 0; row < 10; row++){
+           for(var col = 0; col < 10; col++){
+                var $div = $("<div></div>");
+                $div.css({
+                    "left": 0,
+                    "top": 0,
+                    "display":"none",
+                    "backgroundPosition": -col * 56 + "px "+ -row * 30 + "px"
+                });
+               $("p").append($div);
+
+           }
+       }
+       // 通过each语句进行动画
+
+        /*
+             每个色块依次上来，pos * 10
+             每列色块依次上来, pos % 56 * 10
+         */
+        $("div").each(function (pos) {
+            $(this).delay(pos / 10 * 30).fadeIn(20).animate({
+                'left': (pos % 10) * 56,
+                'top': parseInt(pos / 10) * 30
+            }, 2000)
+        })
+
+    </script>
+</body>
+</html>

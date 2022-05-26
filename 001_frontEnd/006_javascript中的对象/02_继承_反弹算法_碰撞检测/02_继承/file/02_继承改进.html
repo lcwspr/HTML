@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // People类，Student类
+        // Student继承People,Student能够拥有people的属性，方法并且还能自己丰富一些
+
+        function People(name, age, sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+        }
+
+        People.prototype.sayHello = function () {
+            console.log("你好我是"+this.name);
+        };
+        People.prototype.eat = function () {
+            console.log("我要吃饭")
+        };
+
+
+        function Student(name, age, sex, xuehao, score) {
+            // People.apply(this.arguments);
+            // 重新执行一下自己的构造器，自己的构造器constructor是people
+            this.constructor.apple(this.arguments);
+            this.xuhao = xuehao;
+            this.score = score;
+        }
+
+        Student.prototype = new People();
+
+        People.prototype.sayHello = function () {
+            console.log("你好我是学生，我的名字是"+this.name);
+        };
+        Student.prototype.study = function () {
+            console.log("好好学习哈哈哈")
+        };
+        Student.prototype.lol = function () {
+            console.log('lol')
+        };
+
+        var xiaohong = new Student("小红", 12, '女', 16104113, 99.9);
+        xiaohong.lol();
+        xiaohong.eat();
+        xiaohong.sayHello();
+    </script>
+</body>
+</html>

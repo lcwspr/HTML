@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div><img src="../img/01_包不能隔开作用域.png" alt=""></div>
+    <script>
+        window.onload = function () {
+            var box = document.getElementsByTagName('div')[0];
+            alert(box.clientWidth);
+        };
+
+    </script>
+</body>
+</html>

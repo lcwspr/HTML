@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function People(name, age, sex) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.sayHello = function () {
+            console.log("nice to meet you, my name is " + this.name)
+        }
+    }
+
+    var xiaoming  = new People("xiaomingming", 13, "男");
+    xiaoming.sayHello();
+
+
+    function Dog(name, pinzhong, age, sex) {
+        this.name = name;
+        this.pinzhong = pinzhong;
+        this.age = age;
+        this.sex = sex;
+        this.wangwang = function () {
+            console.log('叫叫叫' + this.name);
+        }
+    }
+
+    var xiaobai = new Dog("xiaobai", "狮子", 3, "公的");
+    xiaobai.wangwang();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

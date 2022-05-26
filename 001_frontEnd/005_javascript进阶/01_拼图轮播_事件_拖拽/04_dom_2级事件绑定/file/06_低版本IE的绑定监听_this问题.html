@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box1{
+            width: 400px;
+            height: 400px;
+            background-color: yellowgreen;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box1"></div>
+
+
+<script>
+    var box1 = document.getElementById('box1');
+
+    box1.attachEvent("onclick", function(){
+        // 我们的事件处理函数就是changeColor, 但是里面的this要为box1
+        changeColor.call(box1);
+    });
+
+    function changeColor() {
+        this.style.backgroundColor = "red";
+    }
+</script>
+</body>
+</html>

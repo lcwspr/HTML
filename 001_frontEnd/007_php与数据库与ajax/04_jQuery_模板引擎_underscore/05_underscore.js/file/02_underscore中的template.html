@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script src="../../../../999_js/underscore.js"></script>
+<script>
+    // 模板字符串
+    var templateString = "好<%= emotion %>啊，我今天买了<%= product %>，花了<%= money %>元";
+
+    // 通过模板字符串生成一个数据绑定函数
+    var compile = _.template(templateString);
+
+
+    // 字典
+    var dictionary = {
+        "emotion": "好开心",
+        "product": "苹果手机",
+        "money": "6000"
+    };
+
+    // 调用数据绑定函数
+    var domStr = compile(dictionary);
+    console.log(domStr);
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

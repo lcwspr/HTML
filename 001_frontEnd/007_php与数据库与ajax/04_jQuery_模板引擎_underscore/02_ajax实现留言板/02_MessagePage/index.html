@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		table,tr,td{
+			border-collapse: collapse;
+			border: 1px solid #ccc;
+		}
+		tr{
+			height: 40px;
+		}
+		td{
+			line-height: 25px;
+		}
+		.kk{
+			width: 600px;
+		}
+
+	</style>
+</head>
+<body>
+	<table id="myTable">
+		<caption>小留言板</caption>
+		<tr>
+			<td>ID</td>
+			<td>姓名</td>
+			<td>时间</td>
+			<td>qq</td>
+			<td>content</td>
+			<td></td>
+		</tr>
+	</table>
+	<script type="text/javascript" src="../js/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript">
+	$.get("control/read.php", {"order": 1}, function(data){
+
+		// 返回的data是一个json,现在开始组件dom
+		for(var i = 0; i < data.res.length; i++){
+			$("#myTable").append($(
+					"<tr num='"+ data.res[i].id +"'>"+
+						"<td>"+ data.res[i].id +"</td>"+
+						"<td>"+ data.res[i].name +"</td>"+
+						"<td>"+ data.res[i].date +"</td>"+
+						"<td>"+ data.res[i].qq +"</td>"+
+						"<td><div class='content'>"+ data.res[i].content +"</div></td>"+
+						"<td><a href='javascript:void(0);' class='del'>删除</a></td>"+
+					"</tr>"
+
+				));
+		}
+		// 不想要直接使用a链接跳转，想要使用ajax请求后台数据有两个难题需要解决
+			// 		1.  怎么绑定事件？
+			// 			* 绑定一个类名，方便获取，添加事件监听
+			// 		2.  怎么确定删除谁？
+			// 			* 强行绑定一个id
+		// DOM组件完毕之后，就可以给所有的a标签添加事件监听
+		// 事件绑定
+		$("#myTable a.del").click(function(){
+
+			var $self = $(this);
+			// 单击事件监听
+			var delId = $(this).parents("tr").attr("num");
+			if(!confirm("你真的要删除id为" + delId+"的条目吗?")){
+				return;
+			}
+
+			$.get("control/delete.php", {"id": delId}, function(data){
+				console.log($self);
+				$self.parents("tr").fadeOut(500);
+			});
+		});
+
+
+		$('#myTable tr td div.content').click(function(){
+			var delId = $(this).parents("tr").attr("num");	
+			// $(this).css("background-color", "red");
+			// 点击谁谁消失
+			$(this).hide();
+			// 后面添加一个dom输入框
+			$(this).after($("<input type='text' class='kk' />"));
+			// 让自己的兄弟kk (就是上一条语句添加的那个kk,里面的内容变为自己的html)
+			$(this).siblings('.kk').val($(this).html());
+			// 让光标在里面闪烁，focus是原生js的方法，获取焦点
+			$(this).siblings('.kk')[0].focus();
+
+			// 添加监听
+			$(this).siblings('.kk').keydown(function(event) {
+				if(event.keyCode == 13){
+					// 按下了回车键
+					// $self = $(this);
+					console.log("keydown");
+					if(confirm('是否要提交修改结果')){
+						updateReq($(this));
+					}
+				}
+			});
+
+			$(this).siblings('.kk').blur(function(){
+				console.log("blur")
+					updateReq($(this));
+			});
+
+
+			function updateReq($self){
+				$.get("control/update.php",
+						{
+							"id": delId, 
+							"content": $self.val()}, 
+						function(data){
+							if(data.result == "ok"){
+								$self.hide();
+								$self.siblings('.content').html($self.val())
+								$self.siblings('.content').fadeIn();
+						}
+				});
+			}
+		});
+
+	})
+		
+	</script>
+</body>
+</html>

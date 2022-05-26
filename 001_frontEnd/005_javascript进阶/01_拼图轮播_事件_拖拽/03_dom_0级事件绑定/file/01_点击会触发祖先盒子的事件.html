@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            height: 9000px;
+        }
+        div{
+            width: 200px;
+            height: 300px;
+            background-color: red;
+        }
+        p{
+            width: 50px;
+            height: 50px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+<!--如果一个div挡住了body的一部分，那么会不会触发body的事件-->
+<!--会的，也就是只要给范围内的添加事件，都会触发父事件-->
+    <div id="box">
+        <ul>
+            <li>
+                <ul>
+                    <li>
+                        <p></p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        document.body.onclick = function () {
+            alert('我是整个页面');
+        };
+
+        var oBox = document.getElementById('box');
+        oBox.onclick = function () {
+            alert('我是box盒子')
+        }
+    </script>
+</body>
+</html>

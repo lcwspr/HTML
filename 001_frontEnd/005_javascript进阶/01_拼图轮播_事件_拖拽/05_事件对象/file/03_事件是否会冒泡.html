@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        p{
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p></p>
+    </div>
+    <script>
+        var oDiv = document.getElementsByTagName('div')[0];
+        var count = 0;
+        oDiv.onmouseover = function (event) {
+            console.log(++count);
+            event.bubbles = false;
+        };
+
+        // oDiv.onmouseenter = function (event) {
+        //     console.log(++count);
+        // };
+
+
+    </script>
+</body>
+</html>

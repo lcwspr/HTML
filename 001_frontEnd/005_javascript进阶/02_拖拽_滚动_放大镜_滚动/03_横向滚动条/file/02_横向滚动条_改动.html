@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 760px;
+            height: 150px;
+            margin: 100px auto;
+            border: 1px solid #000;
+            position: relative;
+        }
+        .box .leftBtn{
+            float: left;
+            width: 30px;
+            height: 150px;
+            position: relative;
+        }
+        .box .leftBtn a{
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 65px;
+            background: #fff url(../img/bg05.png) 0 0 no-repeat;
+        }
+        .box .imgList{
+            float: left;
+            width: 700px;
+            height: 150px;
+            position: relative;
+            /*overflow: hidden;*/
+
+        }
+        .box .imgList ul{
+            list-style: none;
+            width: 50000px;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+        .box .imgList ul li{
+            float: left;
+            width: 200px;
+            height: 130px;
+            margin-right: 10px;
+        }
+
+        .box .imgList ul li img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .box .rightBtn{
+            float: left;
+            width: 30px;
+            height: 150px;
+            position: relative;
+        }
+        .box .rightBtn a{
+            position: absolute;
+            top: 20px;
+            right: 0;
+            width: 20px;
+            height: 65px;
+            background:  url(../img/bg05.png) -42px 0 no-repeat;
+        }
+
+        .box .bar{
+            position: absolute;
+            bottom: 0;
+            left: 30px;
+            width: 700px;
+            height: 20px;
+            background-color: #2b2b2b;
+        }
+        .span1{
+            position: absolute;
+            top: 50%;
+            margin-top: -7px;
+            left: 0;
+            width: 101px;
+            height: 15px;
+            background: url(../img/bg07.png) 0 -32px;
+        }
+        .span2{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 11px;
+            height: 15px;
+            background: #2b2b2b url(../img/bg07.png) 0 0 no-repeat;
+        }
+        .span3{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 11px;
+            height: 15px;
+            background-color: blue;
+            background: url(../img/bg07.png) -24px 0 no-repeat;
+        }
+        .span4{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 10px;
+            height: 15px;
+            margin-left: -5px;
+            background: #fff url(../img/bg07.png) -14px 0 no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="leftBtn">
+            <a href="javascript:void(0);" id="leftBtn"></a>
+        </div>
+        <div class="imgList">
+            <ul id="m_unit">
+                <li><img src="../../../../999_img/number/0.png" alt=""></li>
+                <li><img src="../../../../999_img/number/1.png" alt=""></li>
+                <li><img src="../../../../999_img/number/2.png" alt=""></li>
+                <li><img src="../../../../999_img/number/3.png" alt=""></li>
+                <li><img src="../../../../999_img/number/4.png" alt=""></li>
+                <li><img src="../../../../999_img/number/5.png" alt=""></li>
+                <li><img src="../../../../999_img/number/6.png" alt=""></li>
+                <li><img src="../../../../999_img/number/7.png" alt=""></li>
+                <li><img src="../../../../999_img/number/8.png" alt=""></li>
+            </ul>
+        </div>
+        <div class="rightBtn">
+            <a href="javascript:void(0);" id="rightBtn"></a>
+        </div>
+        <div class="bar">
+            <span class="span1" id="slideBlock">
+                <span class="span2"></span>
+                <span class="span3"></span>
+                <span class="span4"></span>
+            </span>
+        </div>
+    </div>
+
+    <script>
+        var oLeftBtn = document.getElementById("leftBtn");
+        var oRightBtn = document.getElementById("rightBtn");
+        var oMUnit = document.getElementById("m_unit");
+        var oSlideBlock = document.getElementById("slideBlock");
+
+
+        var lisLength = oMUnit.getElementsByTagName("li").length;
+        var allWidth = lisLength * 210;   // 200 + 10
+
+
+        // 比例问题
+        // 滑块的初始宽度
+        var oSlideBlockWidth = 700 / allWidth * 700;
+        oSlideBlock.style.width =  oSlideBlockWidth + "px";
+
+
+        var nowLeft = 0;    // 图片列表的当前信号量
+        var slideBlockLeft = 0;
+
+        oRightBtn.onclick = function () {
+            nowLeft -= 20;
+            slideBlockLeft += 20 / allWidth * 700;
+
+            if(nowLeft <= -allWidth + 710){
+                nowLeft = -allWidth + 710;
+                slideBlockLeft = 700 - oSlideBlockWidth;
+            }
+
+            m_unit.style.left = nowLeft + "px";
+            oSlideBlock.style.left = slideBlockLeft + "px";
+        };
+
+        oLeftBtn.onclick = function () {
+            nowLeft += 20;
+            slideBlockLeft -= 20 / allWidth * 700;
+
+            if(nowLeft >= 0){
+                nowLeft = 0;
+                slideBlockLeft = 0;
+            }
+
+            m_unit.style.left = nowLeft + "px";
+            oSlideBlock.style.left = slideBlockLeft + "px";
+        };
+
+
+        oSlideBlock.onmousedown = function (event) {
+            event = event || window.event;
+            var deltaX = event.clientX - oSlideBlock.offsetLeft;
+
+            document.onmousemove = function (event) {
+                event = event || window.event;
+
+                slideBlockLeft = event.clientX - deltaX;
+                nowLeft = -slideBlockLeft / 700 * allWidth;
+
+                if(nowLeft <= -allWidth + 710){
+                    nowLeft = -allWidth + 710;
+                    slideBlockLeft = 700 - oSlideBlockWidth;
+                }
+                if(nowLeft >=0){
+                    nowLeft = 0;
+                    slideBlockLeft = 0;
+                }
+
+                oSlideBlock.style.left = slideBlockLeft + "px";
+                m_unit.style.left = nowLeft + "px";
+
+                return false;
+            };
+
+            document.onmouseup = function () {
+                document.onmousemove = null;
+            }
+
+        }
+    </script>
+</body>
+</html>

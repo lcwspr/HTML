@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box1{
+            width: 400px;
+            height: 400px;
+            background-color: yellowgreen;
+        }
+        #box2{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+        #box3{
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box1">
+    <div id="box2">
+        <div id="box3"></div>
+    </div>
+</div>
+
+<script>
+    var box1 = document.getElementById('box1');
+    var box2 = document.getElementById('box2');
+    var box3 = document.getElementById('box3');
+
+    box1.addEventListener("click", function (event) {
+        event.stopPropagation();
+        alert('box 1 被点击, capture');
+    },true);
+
+    box2.addEventListener("click", function () {
+        alert('box 2 被点击, capture');
+    },true);
+
+    box3.addEventListener("click", function () {
+        alert('box 3 被点击, capture');
+    },true);
+
+    box1.addEventListener("click", function () {
+        alert('box 1 被点击, bubble');
+    },false);
+
+    box2.addEventListener("click", function () {
+        alert('box 2 被点击, bubble');
+    },false);
+
+    box3.addEventListener("click", function () {
+        alert('box 3 被点击, bubble');
+    },false);
+
+
+
+    document.body.addEventListener("click", function () {
+        alert('body 被点击 ， capture')
+    },true);
+
+    document.addEventListener("click", function () {
+        alert('document 被点击 ， capture')
+    },true);
+
+    window.addEventListener("click", function () {
+        alert('window 被点击 ， capture')
+    },true);
+
+
+    document.body.addEventListener("click", function () {
+        alert('body 被点击 ， capture')
+    },false);
+
+    document.addEventListener("click", function () {
+        alert('document 被点击 ， capture')
+    },false);
+
+    window.addEventListener("click", function () {
+        alert('window 被点击 ， capture')
+    },false);
+</script>
+</body>
+</html>

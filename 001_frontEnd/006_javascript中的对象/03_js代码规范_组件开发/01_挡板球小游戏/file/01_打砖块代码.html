@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 940px;
+            height: 500px;
+            border: 1px solid #000;
+            margin: 50px auto;
+            position: relative;
+            cursor: none;
+        }
+        .block{
+            position: absolute;
+            width: 94px;
+            height: 36px;
+            top: 0;
+            left: 0;
+            background-color: blue;
+            background: url(../img/block.png);
+            background-position: -94px 0;
+        }
+
+        .ball{
+            position: absolute;
+            width: 27px;
+            height: 27px;
+            background: url(../img/ball.png);
+        }
+
+        .racket{
+            position: absolute;
+            width: 179px;
+            height: 37px;
+            background: url("../img/racket.png");
+            top: 450px;
+            left: 30px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box" id="box">
+        <div class="ball" id="ball"></div>
+        <div class="racket" id="racket"></div>
+    </div>
+
+    <script>
+
+        // 获取父盒子
+        var oBox = document.getElementById("box");
+        // 获取小球
+        var oBall = document.getElementById('ball');
+        // 获取拉杆
+        var oRacket = document.getElementById('racket');
+
+
+
+        // 砖块类
+        function Block(left, top, color){
+            this.left = left;
+            this.top = top;
+            this.color = color; // color 0, 1, 2, 3, 4
+
+            // 为了方便
+            this.width = 94;
+            this.height = 36;
+
+            this.alive = true;
+
+            this.init();
+        }
+
+        // 初始化方法
+        Block.prototype.init = function () {
+            this.dom = document.createElement("div");
+            oBox.appendChild(this.dom);
+            this.dom.className = "block";
+            this.dom.style.left = this.left + "px";
+            this.dom.style.top = this.top + "px";
+            this.dom.style.backgroundPositionX = this.color * -94 + "px";
+        };
+
+        // check方法，每个砖块能够检测自己有没有被小球撞到
+        // 砖块类，自己检测自己有没有被小球撞击到
+        // 观察者模式，每个砖块去观察小球的位置
+        Block.prototype.check = function () {
+            // console.log("我是" + this.left + ",  " + this.top + "方块, check中");
+            // 检测到碰撞到自己上边
+            if(myBall.top <= this.top && myBall.top >= this.top - myBall.d
+                && myBall.left >= this.left - myBall.d && myBall.left < this.left + this.width
+            ){
+                // 碰到顶边
+                myBall.deltaY = -myBall.deltaY;
+                this.hide();
+                return true;
+            }
+            else if(myBall.top <= this.top + this.height && myBall.top >= this.top + this.height - myBall.d
+                && myBall.left >= this.left - myBall.d && myBall.left <= this.left + this.width){
+                // 碰到底边
+                myBall.deltaY = -myBall.deltaY;
+                this.hide();
+                return true;
+
+
+            }else if(myBall.top >= this.top + myBall.d && myBall.top <= this.top + this.height
+                && myBall.left >= this.left - myBall.d && myBall.left <= this.left
+            ){
+                // 碰到自己的左边
+                myBall.deltaY = -myBall.deltaX;
+                this.hide();
+                return true;
+
+
+            }else if(myBall.top >= this.top + myBall.d && myBall.top <= this.top + this.height
+                && myBall.left >= this.left + this.width - this.d && myBall.left <= this.left +this.width){
+                // 碰到自己的右边
+                myBall.deltaY = -myBall.deltaX;
+                this.hide();
+                return true;
+
+            }
+            return false;
+        };
+
+
+        Block.prototype.hide = function () {
+            this.alive = false;
+            box.removeChild(this.dom);
+        };
+
+
+        // 地图类
+        function Map(){
+            this.map = [
+                [ ,2, ,1,3, ,1,4, , ],
+                [ , , , ,1, ,1, , , ],
+                [ , ,2, ,1,5, , , , ],
+                [ ,1, , ,1,1, , , , ],
+                [ ,1,1,1, ,1,1, , , ],
+                [ , ,1, , ,1,1, , , ],
+                [ , ,1,1, ,4,1, , , ],
+            ];
+            this.blocksArr = [];  // 存放所有的砖块对象
+
+            this.createBlocks();
+
+            // 检查所有砖块是否被撞击
+            // this.checkAllBlocks();
+        }
+
+        Map.prototype.createBlocks = function () {
+            for(var row = 0; row < this.map.length; row++){
+                for(var col = 0; col < this.map[row].length; col++){
+                    // this.map[row][col] && new Block(col * 94, row * 36, this.map[row][col]);
+                    // 如果当前这个元素不是undefined
+                    if(this.map[row][col]){
+                        this.blocksArr.push(new Block(col * 94, row * 36, this.map[row][col]));
+                    }
+                }
+            }
+        };
+
+        Map.prototype.checkAllBlocks = function () {
+            // 每一帧都会执行，会遍历所有的砖块，判断是否碰撞到小球
+            for(var i = 0; i < this.blocksArr.length; i++){
+                if(this.blocksArr[i].alive){
+                    var res = this.blocksArr[i].check()
+                }
+                if(res){
+                    break;
+                }
+            }
+        };
+
+
+        // 小球类
+        function Ball(){
+            this.left = 300;
+            this.top = 300;
+            this.d = 27;
+
+            this.deltaX = 2;
+            this.deltaY = -1;
+            // 绑定页面dom
+            this.dom = oBall;
+            // this.render();  定时器中调用
+            this.move();
+        }
+
+        Ball.prototype.render = function () {
+            this.dom.style.left = this.left + "px";
+            this.dom.style.top = this.top + "px";
+        };
+
+        Ball.prototype.move = function () {
+            var self = this;
+            // 定时器
+            this.timer = setInterval(function () {
+                self.left += self.deltaX;
+                self.top += self.deltaY;
+
+                // 到游戏边界的反弹，是小球自己处理的
+                if(self.top >= oBox.clientHeight - self.d){
+                    self.deltaY = -self.deltaY;
+                    self.top = oBox.clientHeight - self.d;
+                    // clearInterval(myBall.timer);
+                    // alert('game over');
+                }
+                if(self.top <= 0){
+                    self.deltaY = -self.deltaY;
+                    self.top = 0;
+                }
+                if(self.left >= oBox.clientWidth - self.d ){
+                    self.deltaX = -self.deltaX;
+                    self.left = oBox.clientWidth - self.d;
+                }
+                if(self.left <= 0){
+                    self.deltaX = -self.deltaX;
+                    self.left = 0;
+                }
+
+                // 每10毫秒，都要让所有的block都执行一下自己的check方法
+                myMap.checkAllBlocks();
+
+                // 每间隔时间，需要让挡板执行一下check方法
+                racket.check();
+
+                self.render();
+            }, 10);
+        };
+
+        // 挡板类
+        function Racket(left) {
+            // 这个x值是js  r对象的属性，所以要通过语句与dom的style.left值取得对应关系
+            this.left = left;
+            this.top = 450;
+            this.dom = oRacket;
+            this.width = 179;
+            this.height = 37;
+
+            this.render();
+            this.bindEvent();
+            this.check();
+        }
+        Racket.prototype.render = function () {
+            this.dom.style.left = this.left + "px";
+            this.dom.style.top = this.top + "px";
+        };
+
+        // 绑定鼠标事件
+        Racket.prototype.bindEvent = function() {
+            var self = this;
+            oBox.onmousemove = function (event) {
+                event = event || window.event;
+
+                // 鼠标在盒子内的x值
+                self.left = event.clientX - box.offsetLeft;
+
+                self.render();
+            }
+        };
+
+        // 检测小球有没有碰到自己
+        Racket.prototype.check = function () {
+            // console.log("我是" + this.left + ",  " + this.top + "方块, check中");
+            // 检测到碰撞到自己上边
+            if(myBall.top <= this.top && myBall.top >= this.top - myBall.d
+                && myBall.left >= this.left - myBall.d && myBall.left < this.left + this.width
+            ){
+                // 碰到顶边
+                myBall.deltaY = -myBall.deltaY;
+                return true;
+            }
+            else if(myBall.top <= this.top + this.height && myBall.top >= this.top + this.height - myBall.d
+                && myBall.left >= this.left - myBall.d && myBall.left <= this.left + this.width){
+                // 碰到底边
+                myBall.deltaY = -myBall.deltaY;
+                return true;
+
+
+            }else if(myBall.top >= this.top + myBall.d && myBall.top <= this.top + this.height
+                && myBall.left >= this.left - myBall.d && myBall.left <= this.left
+            ){
+                // 碰到自己的左边
+                myBall.deltaY = -myBall.deltaX;
+                return true;
+
+
+            }else if(myBall.top >= this.top + myBall.d && myBall.top <= this.top + this.height
+                && myBall.left >= this.left + this.width - this.d && myBall.left <= this.left +this.width){
+                // 碰到自己的右边
+                myBall.deltaY = -myBall.deltaX;
+                return true;
+
+            }
+            return false;
+        };
+
+
+        // 创建地图
+        var myMap = new Map();
+        var myBall = new Ball();
+
+        var racket = new Racket(300);
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        div{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            /*border: 1px solid #000;*/
+            float: left;
+            background-image: url(../../../../999_img/dog/0.jpg);
+            bottom: 0;
+            right: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+
+    <script src="../../../../999_js/jquery-1.12.3.min.js"></script>
+    <script>
+        // $("div").animate({"width": 200}, 1000);
+
+        // 如果使用jquery来进行布局？
+        $("div").each(function (i) {
+            $(this).css({
+                "left": 0,
+                "top": 500,
+                "background-position": -i % 3 * 200 + "px "+ -parseInt(i / 3) * 200 + "px"
+            }).delay(i * 30).animate({'left': (i % 3) * 200, 'top': parseInt(i / 3) * 200},500);
+        });
+    </script>
+</body>
+</html>
